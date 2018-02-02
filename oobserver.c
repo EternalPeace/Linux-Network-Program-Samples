@@ -30,8 +30,8 @@ main (int argc, char **argv)
 
   struct sockaddr_in dr;
   dr.sin_family = AF_INET;
-  dr.sin_port = htons (10000);
-  dr.sin_addr.s_addr = inet_addr(INADDR_ANY);
+  dr.sin_port = htons (1200);
+  dr.sin_addr.s_addr = INADDR_ANY;
 
   int result = bind (fd, (struct sockaddr *) &dr, sizeof (dr));
   if (result == -1)
@@ -54,8 +54,7 @@ main (int argc, char **argv)
       if (r > 0)
 	{
 	  buf[r] = 0;
-	  printf ("接收%d字节的正常数据(normal data)：%s\n", r,
-		  buf);
+	  printf ("接收%d字节的正常数据(normal data)：%s\n", r, buf);
 	  sleep (1);
 	}
       else

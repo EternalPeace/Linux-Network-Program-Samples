@@ -18,8 +18,8 @@ main (int argc, char **argv)
 
   struct sockaddr_in dr;
   dr.sin_family = AF_INET;
-  dr.sin_port = htons (10000);
-  dr.sin_addr.s_addr = inet_addr ("192.168.209.128");
+  dr.sin_port = htons (1200);
+  dr.sin_addr.s_addr = INADDR_ANY;
 
   int result = connect (fd, (struct sockaddr *) &dr, sizeof (dr));
   if (result == -1)
