@@ -1,0 +1,191 @@
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook V3.1//EN">
+
+<refentry id="coffee">
+
+ <refmeta>
+  <refentrytitle>coffee</refentrytitle>
+   <manvolnum>1</manvolnum>
+ </refmeta>
+
+ <refnamediv>
+  <refname>coffee</refname>
+   <refpurpose>Control the networked coffee machine</refpurpose>
+ </refnamediv>
+
+ <refsynopsisdiv>
+  <cmdsynopsis>
+   <command>coffee</command>
+    <arg choice="opt">
+     <option>-s|--scorch</option>
+    </arg>
+    <arg choice="opt">
+     <option>-b|--blend <replaceable>blend</replaceable></option>
+    </arg>
+    <arg choice="req">
+     <option><replaceable>num_cups</replaceable></option>
+    </arg>
+  </cmdsynopsis>
+ </refsynopsisdiv>
+
+ <refsect1 id="descrip">
+  <title>
+   Description
+  </title>
+
+  <para>
+   <command>coffee</command> sends a request to the remote coffee 
+   machine (usually the device <filename>/dev/cfpt0</filename>) to 
+   initiate a brew cycle to create <userinput>num_cups</userinput>
+   of coffee. It assumes the device is turned on and that the water 
+   and bean reservoirs have sufficient stocks actually to complete 
+   the brew cycle. For those who prefer GNU's long options, they are 
+   supplied.
+  </para>
+ </refsect1>
+
+ <refsect1>
+  <title>
+   Options
+  </title>
+
+  <para>
+   <userinput>-s|--scorch</userinput>
+  </para>
+
+  <para>
+   Scorch the coffee.  Rather than waiting for the brewed 
+   coffee to age and oxidize on the warming plate, the freshly 
+   brewed coffee is piped through a super-heating device, 
+   effectively simulating the flavor of 6 oz. of liquid coffee 
+   that has been left on the burner for 2 hours.
+  </para>
+  
+  <para>
+   <userinput>-b|--blend</userinput>
+  </para>
+
+  <para>
+   Specify the blend of coffee to be brewed. 
+   <userinput>blend</userinput>
+   is one of <userinput>regular</userinput>, 
+   <userinput>costarican</userinput>, 
+   <userinput>java</userinput>, or <userinput>decaf</userinput>.  
+   If <userinput>blend</userinput> is not specified, the default 
+   <userinput>regular</userinput> (blech) is assumed.
+  </para>
+ </refsect1>
+
+ <refsect1>
+  <title>
+   Files
+  </title>
+
+  <variablelist>
+   <varlistentry>
+    <term>
+     <filename>/dev/cfpt0</filename>
+    </term>
+    <listitem><para>
+     The default coffee machine.  Large installations may have 
+     multiple coffee machines, specified as 
+     <filename>/dev/cfpt[0-15]</filename>.
+    </para></listitem>
+   </varlistentry>
+
+   <varlistentry>
+    <term>
+     /dev/expr0
+    </term>
+    <listitem><para>
+     The espresso machine.  Usually only in the boss's office. 
+     Large installations having multiples bosses may have multiple 
+     machines, specified as <filename>/dev/expr[0-15]</filename>.
+    </para></listitem>
+   </varlistentry>
+  </variablelist>
+ </refsect1>
+
+ <refsect1>
+  <title>
+   Environment
+  </title>
+
+  <variablelist>
+   <varlistentry>
+    <term>
+     <envar>CF_BLEND</envar>
+    </term>
+    <listitem><para>
+     Set this variable to your preferred 
+     <userinput>blend</userinput>.  Equivalent to <command>coffee -b 
+     <envar>$CF_BLEND</envar></command>.
+    </para></listitem>
+   </varlistentry>
+
+   <varlistentry>
+    <term>
+     <envar>CF_SCORCH</envar>
+    </term>
+    <listitem><para>
+     Set this variable if you prefer scorched coffee by default.  
+     Equivalent to <command>coffee -s</command>.  
+    </para></listitem>
+   </varlistentry>
+  </variablelist
+ </refsect1>
+
+ <refsect1>
+  <title>
+    Diagnostics
+  </title>
+  
+  <para>
+   None.  This section is here for illustration purposes only.
+  </para>
+ </refsect1>
+
+ <refsect1>
+  <title>
+   See Also
+  </title>
+  <para>
+   <command>creamer(1)</command>, <command>grind(1)</command>,
+   <command>sweetener(1)</command>
+  </para>
+ </refsect1>
+
+ <refsect1>
+  <title>
+   Notes
+  </title>
+
+  <para>
+   If there were any notes, they would go here.
+  </para>
+ </refsect1>
+
+ <refsect1>
+  <title>
+   Author
+  </title>
+
+  <para>Kurt Wall <ulink url="mailto:kwall@kurtwerks.com">
+   kwall@kurtwerks.com</ulink>
+  </para>
+ </refsect1>
+
+ <refsect1>
+  <title>
+   Bugs
+  </title>
+
+  <para>
+   You may have to get up out of your chair if the whole bean 
+   repository is empty.  Multiple successive requests queued 
+   to the same device can cause overflow.  Taking the last cup 
+   of coffee without starting a new pot is a blight upon your 
+   soul and condemns you to everlasting damnation.  
+  </para>
+ </refsect1>
+
+</refentry>

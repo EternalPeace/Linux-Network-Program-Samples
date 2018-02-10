@@ -1,0 +1,26 @@
+# Makefile for bogusapp
+
+PACKAGE = bogusapp
+VERSION = 1.0.0
+
+srcdir = @srcdir@
+
+CC = @CC@
+CFLAGS = @CFLAGS@
+LDFLAGS = @LDFLAGS@
+LIBS = @LIBS@
+
+LEX = @LEX@
+YACC = @YACC@
+AWK = @AWK@
+
+objs = bogusapp.o
+
+srcs = $(srcdir)/bogusapp.c
+
+all: bogusapp
+
+bogusapp: $(objs)
+	$(CC) $(LDFLAGS) $(objs) -o bogusapp
+
+

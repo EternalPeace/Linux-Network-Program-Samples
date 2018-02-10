@@ -1,0 +1,19 @@
+These files are included in the zip file. There is only one figure included,
+since the old ones will do nicely... 
+
+-rw-r--r--   1 patrikj  patrikj    172084 Sep  5 02:25 31fig03.pcx
+-rw-rw-rw-   1 patrikj  patrikj    102912 Sep  5 02:38 607233x.sdw
+-rw-rw-r--   1 patrikj  patrikj         0 Sep  5 02:39 assets
+drwxrwxr-x   4 patrikj  patrikj      1024 Sep  4 17:11 source
+
+source:
+drwxrwxr-x   2 patrikj  patrikj      1024 Sep  4 16:40 cube
+drwxrwxr-x   2 patrikj  patrikj      1024 Sep  4 13:14 orbits
+
+source/cube:
+-rw-rw-r--   1 patrikj  patrikj       253 Sep  4 01:53 Makefile
+-rw-rw-r--   1 patrikj  patrikj      5650 Sep  4 15:53 cube.c
+
+source/orbits:
+-rw-r--r--   1 patrikj  patrikj       262 Sep  4 13:14 Makefile
+-rw-r--r--   1 patrikj  patrikj      2759 Sep  4 02:07 orbits.c

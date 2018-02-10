@@ -1,0 +1,80 @@
+.\" Process using
+.\" groff -man -Tascii coffee.1
+.\" These four lines show you how to insert a comment into a groff source
+.\" file.  They will not be visible to the groff processor.
+.TH COFFEE 1 "07 September 2000"
+.SH NAME 
+coffee \- Control the networked coffee machine
+.SH SYNOPSIS
+.B coffee [-s|--scorch] [-b|--blend
+.I blend
+.B ]
+.I num_cups
+.SH DESCRIPTION
+.B coffee
+sends a request to the remote coffee machine (usually the device 
+.B /dev/cfpt0
+to initiate a brew cycle to create
+.I num_cups
+of coffee.  It assumes the device is turned on and that the water and bean
+reservoirs have sufficient stocks actually to complete the brew cycle.  For
+those who prefer GNU's long options, they are supplied.
+.SH OPTIONS
+.TP
+.B -s, --scorch
+Scorch the coffee.  Rather than waiting for the brewed coffee to
+age and oxidize on the warming plate, the freshly brewed coffee
+is piped through a super-heating device, effectively simulating
+the flavor of 6 oz. of liquid coffee that has been left on the
+burner for 2 hours.
+.TP
+.B -b, --blend
+Specify the blend of coffee to be brewed.
+.I blend
+is one of
+.I regular, costarican , java,
+or 
+.I decaf.
+If
+.B -b 
+.I blend
+is not specified, the default
+.I regular
+(blech) is assumed.
+.SH FILES
+.TP
+.B /dev/cfpt0
+The default coffee machine.  Large installations may have multiple coffee
+machines, specified as
+.B /dev/cfpt[0-15].
+.TP
+.B /dev/expr0
+The espresso machine.  Usually only in the boss's office. Large installations
+having multiples bosses may have multiple machines, specified as
+.B /dev/expr[0-15].
+.SH ENVIRONMENT
+.TP
+.B CF_BLEND
+Set this variable to your preferred
+.I blend.
+Equivalent to
+.B coffee -b $CF_BLEND.
+.TP
+.B CF_SCORCH
+Set this variable if you prefer scorched coffee by default.  Equivalent to
+.B coffee -s.
+.SH DIAGNOSTICS
+None.  This section is here for illustration purposes only.
+.SH "SEE ALSO"
+.BR creamer (1),
+.BR grind (1)
+.BR sweetener (1),
+.SH NOTES
+If there were any notes, they would go here.
+.SH AUTHOR
+Kurt Wall <kwall@kurtwerks.com>
+.SH BUGS
+You may have to get up out of your chair if the whole bean repository is 
+empty.  Multiple successive requests queued to the same device can cause 
+overflow.  Taking the last cup of coffee without starting a new pot is
+a blight upon your soul and condemns you to everlasting damnation.

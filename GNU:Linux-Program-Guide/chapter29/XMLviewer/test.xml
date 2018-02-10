@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<book>
+  <title color="red">A test title</title>
+  <author>
+    <last_name>Watson</last_name>
+    <first_name>Mark</first_name>
+  </author>
+  <scheme>
+    (define fff
+       (lambda (x) (+ x x)))
+    (define factorial
+       (lambda (n)
+         (if (= n 1)
+           1
+           (* n (factorial (- n 1))))))
+  </scheme>
+</book>

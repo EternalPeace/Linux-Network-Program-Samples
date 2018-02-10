@@ -1,0 +1,21 @@
+#!/bin/bash
+# sigrot.sh
+# Version 2.0
+# Rotate signatures
+# Suitable to be run via cron
+#############################
+
+sigfile=signature
+srcdir=$HOME/doc/signatures
+srcfile=$srcdir/$sigfile
+
+old=$(cat $srcdir/num)
+let new=$(expr $old+1)
+
+if [ -f $srcfile.$new ]; then
+    cp $srcfile.$new $HOME/.$sigfile
+    echo $new > $srcdir/num
+else
+    cp $srcfile.1 $HOME/.$sigfile
+    echo 1 > $srcdir/num
+fi

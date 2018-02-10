@@ -1,0 +1,98 @@
+dnl Autoconfigure script for bogusapp
+dnl Kurt Wall <kwall@kurtwerks.com>
+dnl
+dnl Process this file with `autoconf' to produce a `configure' script
+AC_INIT(bogusapp.c)
+AC_CONFIG_HEADER(config.h)
+
+test -z "$LDFLAGS" && LDFLAGS="-I/usr/include" AC_SUBST(LDFLAGS)
+
+dnl Tests for UNIX variants
+dnl
+AC_CANONICAL_HOST
+
+dnl Tests for programs
+dnl
+AC_PROG_CC
+AC_PROG_LEX
+AC_PROG_AWK
+AC_PROG_YACC
+AC_CHECK_PROG(SHELL, bash, /bin/bash, /bin/sh)
+
+dnl Tests for libraries
+dnl
+AC_CHECK_LIB(socket, socket)
+AC_CHECK_LIB(resolv, res_init, [echo "res_init() not in libresolv"],
+            [echo "res_init() found in libresolv"])
+
+dnl Tests for header files
+dnl
+AC_CHECK_HEADER(killer.h)
+AC_CHECK_HEADERS([resolv.h termio.h curses.h sys/time.h fcntl.h \
+sys/fcntl.h memory.h])
+AC_DECL_SYS_SIGLIST
+AC_HEADER_STDC
+
+dnl Tests for typedefs
+dnl
+AC_TYPE_GETGROUPS
+AC_TYPE_SIZE_T
+AC_TYPE_PID_T
+
+dnl Tests for structures
+AC_HEADER_TIME
+AC_STRUCT_TIMEZONE
+
+dnl Tests of compiler behavior
+dnl
+AC_C_BIGENDIAN
+AC_C_INLINE
+AC_CHECK_SIZEOF(int, 32)
+
+dnl Tests for library functions
+dnl
+AC_FUNC_GETLOADAVG
+AC_FUNC_MMAP
+AC_FUNC_UTIME_NULL
+AC_FUNC_VFORK
+
+dnl Tests of system services
+dnl
+AC_SYS_INTERPRETER
+AC_PATH_X
+AC_SYS_RESTARTABLE_SYSCALLS
+
+dnl Tests in this section exercise a few of `autoconf''s generic macros
+dnl
+dnl First, let's see if we have a usable void pointer type
+dnl
+AC_MSG_CHECKING(for a usable void pointer type)
+AC_TRY_COMPILE([],
+	[char *ptr;
+	 void *xmalloc();
+	 ptr = (char *) xmalloc(1);
+    ],
+	[AC_DEFINE(HAVE_VOID_POINTER) AC_MSG_RESULT(usable void pointer)],
+	AC_MSG_RESULT(no usable void pointer type))
+dnl 
+dnl Now, let's exercise the preprocessor
+dnl
+AC_TRY_CPP(math.h, echo 'found math.h', echo 'no math.h - deep doo doo!')
+
+dnl
+dnl Next, we test the linker
+dnl
+AC_TRY_LINK([#ifndef HAVE_UNISTD_H
+             #include <signal.h>
+			 #endif],
+			[char *ret = *(sys_siglist + 1);],
+			[AC_DEFINE(HAVE_SYS_SIGLIST), AC_MSG_RESULT(got sys_siglist)],
+			[AC_MSG_RESULT(no sys_siglist)])
+dnl
+dnl Finally, set a default value for a ridiculous type
+dnl
+AC_CHECK_TYPE(short_short_t, unsigned short)
+
+dnl Okay, we're done.  Create the output files and get out of here
+dnl
+AC_OUTPUT(Makefile)
