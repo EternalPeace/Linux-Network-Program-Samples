@@ -7,8 +7,8 @@ ASM		= nasm
 CC		= gcc
 LD		= ld
 ASMFLAGS	= -f elf
-CFLAGS		= -c
-LDFLAGS		= -s
+CFLAGS		= -c -m32
+LDFLAGS		= -s -m elf_i386
 
 # This Program
 BIN		= foobar
