@@ -1,0 +1,12 @@
+有一本书叫《用TCP/IP进行网际互连》很不错
+是国际知名计算机教育专家Dauglas Comer 写的
+
+共三卷，第一卷讲的是基本协议（讲得很准确清晰），
+第二卷 讲的是编程细节（以他写的一个操作系统为例），
+第三卷讲的是Client/Server编程，以telnet为例。
+
+
+第二卷的下载地址是：ftp.cs.purdue.edu/pub/comer/v2.dist.tar.z                   
+但是第二卷写得比第三卷早两年，第三卷程序是从以下地址下载的：                  
+ftp.cs.purdue.edu/xinu/tcpip-vol3.bsd.dist.tar.z                                
+有可能这个地址下有第二卷，而且可能更新，都下载试试 
