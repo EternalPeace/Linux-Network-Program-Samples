@@ -1,0 +1,18 @@
+/* Experiments with putting executable code in a data area */
+
+/* Look at functions from int to int */
+
+typedef int (*i_function)(int);
+
+/* Like strcpy, but copies functions into generic space and
+   then casts it to be a function.
+   Implementation is x86 specific, in that it assumes a function
+   ends with opcode c3 (ret).
+*/
+
+
+i_function function_cpy(void *dest, i_function src)
+{
+  /* x86 specific
+  
+}

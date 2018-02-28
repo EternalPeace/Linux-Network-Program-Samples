@@ -1,0 +1,56 @@
+This directory illustrates three different techniques (run-time,
+link-time, and compile-time library interposition) for intercepting
+and wrapping library functions such as malloc and free.
+
+The example program (hello.c) calls malloc and free before printing a
+string.
+
+    #include <stdio.h>
+    #include <malloc.h>
+
+    int main()
+    {
+        free(malloc(10));
+        printf("hello, world\n");
+        exit(0);
+    }
+
+The objective is to interpose our own wrapper functions for malloc and
+free that generate a trace of the sizes and locations of the allocated
+and freed blocks. We can accomplish this using three different
+techniques:
+
+
+1. Run-time interposition using the dynamic linker's LD_PRELOAD
+mechanism.
+
+To build: make hellor
+To run: make runr
+
+2. Link-time interposition using the static linker's (ld) "--wrap
+symbol" flag.
+
+To build: make hellol
+To run: make runl
+	
+3. Compile-time interposition using the C preprocessor and its __FILE__
+and __LINE__ constants.
+
+To build: make helloc
+To run: make runc
+
+******
+Files:
+******
+
+Makefile
+README
+hello.c		main routine
+helloc*		executable based on compile-time interposition
+hellol*		executable based on link-time interposition
+hellor*		executable based on run-time interposition
+malloc.h	header file for compile-time interposition
+mymalloc.c	contains source for all three interposition examples
+mymalloc.o	relocatable object file for link-time interposition
+mymalloc.so*	shared object file for run-time interposition
+

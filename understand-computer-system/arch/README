@@ -1,0 +1,24 @@
+This directory contains the files needed to construct the Y86 assembler and
+simulators.  The subdirectories are as follows:
+
+misc	Source files for the Y86 assembler yas, the Y86 instruction simulator
+	yis, and some other files used by the processor simulators
+
+seq	Code for the SEQ and SEQ+ simulators.  Contain HCL files for
+	homework problems that involve modifying SEQ.
+
+pipe	Code for the PIPE simulator.  Contain HCL files for
+	homework problems that involve modifying PIPE.
+
+y86-code
+	Example .ys files from CS:APP.  Can be used for testing
+	the processor designs.
+
+ptest	Automated scripts for testing processor designs.
+
+The Make file supports the following installation possibilities:
+
+make all	Make all programs, except for the GUI simulators
+make wish	Make the GUI simulators.  Requires an installation of
+		Tcl/Tk.
+

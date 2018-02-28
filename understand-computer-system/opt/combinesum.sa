@@ -1,0 +1,323 @@
+
+combine4:
+	pushl %ebp
+	movl %esp,%ebp
+	subl $12,%esp
+	pushl %edi
+	pushl %esi
+	pushl %ebx
+	movl 8(%ebp),%ebx
+	movl 12(%ebp),%edi
+	addl $-12,%esp
+	pushl %ebx
+	call vec_length
+	movl %eax,%esi
+	addl $-12,%esp
+	pushl %ebx
+	call get_vec_start
+	xorl %ecx,%ecx
+	movl %ecx,(%edi)
+	xorl %edx,%edx
+	cmpl %esi,%ecx
+	jge .L22
+	.p2align 4,,7
+
+	/* $begin combine4sum-s 190 */
+	# combine4: type=INT, OPER = '+' 
+	# data in %eax, x in %ecx, i in %edx, length in %esi
+.L24:			      # \textbf{loop:}
+	addl (%eax,%edx,4),%ecx	# Add data[i] to x	
+	incl %edx		# i++	
+	cmpl %esi,%edx		# Compare i:length
+	jl .L24			# If <, goto \textbf{loop}
+	/* $end combine4sum-s 190 */
+
+.L22:
+	movl %ecx,(%edi)
+	leal -24(%ebp),%esp
+	popl %ebx
+	popl %esi
+	popl %edi
+	movl %ebp,%esp
+	popl %ebp
+	ret
+
+
+combine4p:
+	pushl %ebp
+	movl %esp,%ebp
+	subl $16,%esp
+	pushl %esi
+	pushl %ebx
+	movl 8(%ebp),%ebx
+	addl $-12,%esp
+	pushl %ebx
+	call vec_length
+	movl %eax,%esi
+	addl $-12,%esp
+	pushl %ebx
+	call get_vec_start
+	leal (%eax,%esi,4),%edx
+	xorl %ecx,%ecx
+	cmpl %edx,%eax
+	jae .L28
+	.p2align 4,,7
+
+	/* $begin combine4psum-s 236 */
+	# combine4p: type=INT, OPER = '+'
+	# data in %eax, x in %ecx, dend in %edx
+.L30:			      # \textbf{loop:}
+	addl (%eax),%ecx 	# Add data[0] to x
+	addl $4,%eax	 	# data++
+	cmpl %edx,%eax	 	# Compare data:dend
+	jb .L30		 	# If <, goto \textbf{loop}
+	/* $end combine4psum-s 236 */
+
+.L28:
+	movl 12(%ebp),%eax
+	movl %ecx,(%eax)
+	leal -24(%ebp),%esp
+	popl %ebx
+	popl %esi
+	movl %ebp,%esp
+	popl %ebp
+	ret
+.Lfe5:
+	.size	 combine4p,.Lfe5-combine4p
+.globl combine5_descr
+.data
+	.align 32
+	.type	 combine5_descr,@object
+	.size	 combine5_descr,36
+combine5_descr:
+	.string	"combine5: Array code, unrolled by 3"
+.text
+	.align 4
+.globl combine5
+	.type	 combine5,@function
+combine5:
+	pushl %ebp
+	movl %esp,%ebp
+	subl $12,%esp
+	pushl %edi
+	pushl %esi
+	pushl %ebx
+	movl 8(%ebp),%ebx
+	addl $-12,%esp
+	pushl %ebx
+	call vec_length
+	movl %eax,%edi
+	leal -1(%edi),%esi
+	addl $-12,%esp
+	pushl %ebx
+	call get_vec_start
+	xorl %ecx,%ecx
+	xorl %edx,%edx
+	cmpl %esi,%ecx
+	jge .L44
+	.p2align 4,,7
+.L36:
+	addl (%eax,%edx,4),%ecx
+	addl 4(%eax,%edx,4),%ecx
+	addl 8(%eax,%edx,4),%ecx
+	addl $3,%edx
+	cmpl %esi,%edx
+	jl .L36
+	jmp .L44
+	.p2align 4,,7
+.L41:
+	addl (%eax,%edx,4),%ecx
+	incl %edx
+.L44:
+	cmpl %edi,%edx
+	jl .L41
+	movl 12(%ebp),%eax
+	movl %ecx,(%eax)
+	leal -24(%ebp),%esp
+	popl %ebx
+	popl %esi
+	popl %edi
+	movl %ebp,%esp
+	popl %ebp
+	ret
+.Lfe6:
+	.size	 combine5,.Lfe6-combine5
+.globl combine5p_descr
+.data
+	.align 32
+	.type	 combine5p_descr,@object
+	.size	 combine5p_descr,49
+combine5p_descr:
+	.string	"combine5p: Pointer code, unrolled by 3, for loop"
+.text
+	.align 4
+.globl combine5p
+	.type	 combine5p,@function
+combine5p:
+	pushl %ebp
+	movl %esp,%ebp
+	subl $16,%esp
+	pushl %esi
+	pushl %ebx
+	movl 8(%ebp),%ebx
+	addl $-12,%esp
+	pushl %ebx
+	call get_vec_start
+	movl %eax,%esi
+	addl $-12,%esp
+	pushl %ebx
+	call vec_length
+	leal (%esi,%eax,4),%eax
+	leal -8(%eax),%ecx
+	xorl %edx,%edx
+	cmpl %ecx,%esi
+	jae .L57
+	.p2align 4,,7
+.L49:
+	addl (%esi),%edx
+	addl 4(%esi),%edx
+	addl 8(%esi),%edx
+	addl $12,%esi
+	cmpl %ecx,%esi
+	jb .L49
+	jmp .L57
+	.p2align 4,,7
+.L54:
+	addl (%esi),%edx
+	addl $4,%esi
+.L57:
+	cmpl %eax,%esi
+	jb .L54
+	movl 12(%ebp),%eax
+	movl %edx,(%eax)
+	leal -24(%ebp),%esp
+	popl %ebx
+	popl %esi
+	movl %ebp,%esp
+	popl %ebp
+	ret
+.Lfe7:
+	.size	 combine5p,.Lfe7-combine5p
+
+
+.globl combine6_descr
+.data
+	.align 32
+	.type	 combine6_descr,@object
+	.size	 combine6_descr,52
+combine6_descr:
+	.string	"combine6: Array code, unrolled by 2, Superscalar x2"
+.text
+	.align 4
+.globl combine6
+	.type	 combine6,@function
+combine6:
+	pushl %ebp
+	movl %esp,%ebp
+	subl $12,%esp
+	pushl %edi
+	pushl %esi
+	pushl %ebx
+	movl 8(%ebp),%ebx
+	addl $-12,%esp
+	pushl %ebx
+	call vec_length
+	movl %eax,%edi
+	leal -1(%edi),%esi
+	addl $-12,%esp
+	pushl %ebx
+	call get_vec_start
+	xorl %ecx,%ecx
+	xorl %ebx,%ebx
+	xorl %edx,%edx
+	cmpl %esi,%ecx
+	jge .L82
+	.p2align 4,,7
+.L74:
+	addl (%eax,%edx,4),%ecx
+	addl 4(%eax,%edx,4),%ebx
+	addl $2,%edx
+	cmpl %esi,%edx
+	jl .L74
+	jmp .L82
+	.p2align 4,,7
+.L79:
+	addl (%eax,%edx,4),%ecx
+	incl %edx
+.L82:
+	cmpl %edi,%edx
+	jl .L79
+	movl 12(%ebp),%eax
+	addl %ebx,%ecx
+	movl %ecx,(%eax)
+	leal -24(%ebp),%esp
+	popl %ebx
+	popl %esi
+	popl %edi
+	movl %ebp,%esp
+	popl %ebp
+	ret
+.Lfe9:
+	.size	 combine6,.Lfe9-combine6
+	.align 4
+.globl register_combiners
+	.type	 register_combiners,@function
+register_combiners:
+	pushl %ebp
+	movl %esp,%ebp
+	subl $8,%esp
+	addl $-4,%esp
+	pushl $combine1_descr
+	pushl $combine1
+	pushl $combine1
+	call add_combiner
+	addl $-4,%esp
+	pushl $combine2_descr
+	pushl $combine1
+	pushl $combine2
+	call add_combiner
+	addl $32,%esp
+	addl $-4,%esp
+	pushl $combine3_descr
+	pushl $combine1
+	pushl $combine3
+	call add_combiner
+	addl $-4,%esp
+	pushl $combine4_descr
+	pushl $combine1
+	pushl $combine4
+	call add_combiner
+	addl $32,%esp
+	addl $-4,%esp
+	pushl $combine4p_descr
+	pushl $combine1
+	pushl $combine4p
+	call add_combiner
+	addl $-4,%esp
+	pushl $combine5_descr
+	pushl $combine1
+	pushl $combine5
+	call add_combiner
+	addl $32,%esp
+	addl $-4,%esp
+	pushl $combine5p_descr
+	pushl $combine1
+	pushl $combine5p
+	call add_combiner
+	addl $-4,%esp
+	pushl $combine5p_descr
+	pushl $combine1
+	pushl $combine5px8
+	call add_combiner
+	addl $32,%esp
+	addl $-4,%esp
+	pushl $combine6_descr
+	pushl $combine1
+	pushl $combine6
+	call add_combiner
+	movl %ebp,%esp
+	popl %ebp
+	ret
+.Lfe10:
+	.size	 register_combiners,.Lfe10-register_combiners
+	.ident	"GCC: (GNU) 2.95.2 19991024 (release)"

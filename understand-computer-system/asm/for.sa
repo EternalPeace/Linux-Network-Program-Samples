@@ -1,0 +1,52 @@
+	.file	"for.c"
+	.version	"01.01"
+gcc2_compiled.:
+.text
+	.align 4
+.globl loop
+	.type	 loop,@function
+loop:
+	pushl %ebp
+	movl %esp,%ebp
+	pushl %ebx
+/* $begin for-s 12 */	
+# Initially x, y, and n are offsets 8, 12, and 16 from %ebp
+	movl 8(%ebp),%ebx
+	movl 16(%ebp),%edx
+	xorl %eax,%eax
+	decl %edx
+	js .L4
+	movl %ebx,%ecx
+	imull 12(%ebp),%ecx
+	.p2align 4,,7  # Inserted to optimize cache performance
+.L6:
+	addl %ecx,%eax
+	subl %ebx,%edx
+	jns .L6
+.L4:
+/* $end for-s 12 */	
+	popl %ebx
+	movl %ebp,%esp
+	popl %ebp
+	ret
+.Lfe1:
+	.size	 loop,.Lfe1-loop
+	.ident	"GCC: (GNU) 2.95.3 20010315 (release)"
+
+/* $begin for-ann-s 12 */	
+# Initially x, y, and n are offsets 8, 12, and 16 from %ebp
+	movl 8(%ebp),%ebx	# x
+	movl 16(%ebp),%edx	# n
+	xorl %eax,%eax		# result = 0
+	decl %edx		# i = n-1
+	js .L4			# if i < 0 goto \textbf{done}
+	movl %ebx,%ecx		# x
+	imull 12(%ebp),%ecx	# Put x*y in %ecx
+	.p2align 4,,7  
+# x*y in %ecx, result in %eax, x in %ebx, i in %edx
+.L6:			      # \textbf{loop:}
+	addl %ecx,%eax		# result += x*y
+	subl %ebx,%edx		# i -= x
+	jns .L6			# if i < 0 goto \textbf{loop}
+.L4:			      # \textbf{done:}
+/* $end for-ann-s 12 */	

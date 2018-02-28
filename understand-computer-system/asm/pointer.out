@@ -1,0 +1,12 @@
+ip     = 0xbffff898, *ip    = 0xbffff8d4, **ip   = 2
+ip+1   = 0xbffff89c, ip[1]  =  0x804963c, *ip[1] = 15
+&s.v   = 0xbffff8a4, s.v    = 'a'
+&up->v =  0x8049740, up->v  = 'b'
+f      =  0x8048414
+
+ip     = 0xbffff858, *ip    = 0xbffff8d4, **ip   = 1
+ip+1   = 0xbffff85c, ip[1]  =  0x804963c, *ip[1] = 15
+&s.v   = 0xbffff864, s.v    = 'a'
+&up->v =  0x8049750, up->v  = 'b'
+f      =  0x8048414
+

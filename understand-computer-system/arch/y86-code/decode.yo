@@ -1,0 +1,52 @@
+                      | # Example instructions for decoding
+                      | 
+  0x100:              | .pos 0x100  # Start generating code at address 0x100
+                      | #/* $begin y86-decode1-ys */
+                      | #/* $begin y86-decode1-yo */
+  0x100: 3083fcffffff |     irmovl $-4,%ebx
+  0x106: 406300080000 |     rmmovl %esi,0x800(%ebx)
+  0x10c: 10           |     halt
+                      | #/* $end y86-decode1-yo */
+                      | #/* $end y86-decode1-ys */
+                      | 
+  0x200:              | .pos 0x200  # Start generating code at address 0x200
+                      | #/* $begin y86-decode2-ys */
+                      | #/* $begin y86-decode2-yo */
+  0x200: a068         |     pushl %esi
+  0x202: 8008020000   |     call proc
+  0x207: 10           |     halt
+  0x208:              | proc:
+  0x208: 30830a000000 |     irmovl $10,%ebx
+  0x20e: 90           |     ret
+                      | #/* $end y86-decode2-yo */
+                      | #/* $end y86-decode2-ys */
+                      | 
+  0x300:              | .pos 0x300  # Start generating code at address 0x300
+                      | #/* $begin y86-decode3-ys */
+                      | #/* $begin y86-decode3-yo */
+  0x300: 505407000000 |     mrmovl 7(%esp),%ebp
+  0x306: 00           |     nop
+  0x307: f0           | .byte 0xf0  # invalid instruction code
+  0x308: b018         |     popl %ecx
+                      | #/* $end y86-decode3-yo */
+                      | #/* $end y86-decode3-ys */
+                      | 
+  0x400:              | .pos 0x400  # Start generating code at address 0x400
+                      | #/* $begin y86-decode4-ys */
+                      | #/* $begin y86-decode4-yo */
+  0x400:              | loop:
+  0x400: 6113         |     subl %ecx, %ebx
+  0x402: 7300040000   |     je loop
+  0x407: 10           |     halt  
+                      | #/* $end y86-decode4-yo */
+                      | #/* $end y86-decode4-ys */
+                      | 
+  0x500:              | .pos 0x500  # Start generating code at address 0x500
+                      | #/* $begin y86-decode5-ys */
+                      | #/* $begin y86-decode5-yo */
+  0x500: 6362         |     xorl %esi,%edx
+  0x502: a0           |     .byte 0xa0  # pushl instruction code
+  0x503: 80           |     .byte 0x80  # Invalid register specifier byte
+                      | #/* $end y86-decode5-yo */
+                      | #/* $end y86-decode5-ys */
+                      | 

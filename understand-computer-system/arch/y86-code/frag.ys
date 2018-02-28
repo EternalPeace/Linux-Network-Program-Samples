@@ -1,0 +1,56 @@
+# /* $begin data-dep-ys */
+    irmovl $50,%eax
+    addl %eax,%ebx
+    mrmovl 100(%ebx),%edx
+# /* $end data-dep-ys */
+
+# /* $begin control-dep-ys */
+loop:
+    subl %edx,%ebx
+    jne targ
+    irmovl $10,%edx
+    jmp loop
+targ:
+    halt
+# /* $end control-dep-ys */
+
+# /* $begin pipe-popl-ys */
+    irmovl $5, %edx
+    irmovl $0x100,%esp
+    rmmovl %edx,0(%esp)
+    popl %esp
+    rrmovl %esp,%eax
+# /* $end pipe-popl-ys */
+
+# /* $begin pipe-popl2-ys */
+    irmovl $5, %edx
+    irmovl $0x100,%esp
+    rmmovl %edx,0(%esp)
+    popl %esp
+    nop
+    nop
+    rrmovl %esp,%eax
+# /* $end pipe-popl2-ys */
+
+
+# /* $begin load-store-ys */
+    mrmovl 0(%ecx),%edx   # Load  1
+    pushl  %edx           # Store 1
+    nop
+    popl %edx             # Load  2
+    rmmovl %eax,0(%edx)   # Store 2
+# /* $end load-store-ys */
+
+# /* $begin addr-exception-ys */
+    irmovl $0,%esp        # Set stack pointer to 0
+    pushl %eax            # Attempts to write to 0xfffffffc
+    addl  %ecx,%eax       # Sets condition codes
+# /* $end addr-exception-ys */
+
+# /* $begin basic-ys */
+  irmovl  $1,%eax  # I1
+  irmovl  $2,%ecx  # I2
+  irmovl  $3,%edx  # I3
+  irmovl  $4,%ebx  # I4
+  halt             # I5
+# /* $end basic-ys */

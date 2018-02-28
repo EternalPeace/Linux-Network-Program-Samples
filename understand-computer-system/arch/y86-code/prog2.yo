@@ -1,0 +1,7 @@
+                      | # prog2: Pad with 2 nop's
+  0x000: 30820a000000 |   irmovl $10,%edx
+  0x006: 308003000000 |   irmovl  $3,%eax
+  0x00c: 00           |   nop
+  0x00d: 00           |   nop
+  0x00e: 6020         |   addl %edx,%eax
+  0x010: 10           |   halt

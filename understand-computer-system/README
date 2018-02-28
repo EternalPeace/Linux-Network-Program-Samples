@@ -1,0 +1,27 @@
+Computer Systems: A Programmer's Perspective
+Randal E. Bryant and David R. O'Hallaron
+
+This directory contains the code examples in the CS:APP text. The code
+shown in the text is included automatically from the files in this
+directory, without any hand intervention.
+
+Library files
+src/		- library source code
+include/	- library include files
+lib/		- libcsapp.a library
+
+Code examples from specific chapters:
+intro/          - Introduction
+data/		- Representing and Manipulating Info
+asm/		- Machine Level Representation of C Programs
+arch/		- Processor Architecture
+opt/		- Optimizing Program Performance
+mem/            - The Memory Hierarchy
+link/           - Linking 
+ecf/            - Exceptional Control Flow
+perf/		- Measuring Program Performance
+vm/             - Virtual Memory
+io/		- System-level I/O
+netp/           - Network Programming
+concp/          - Concurrent Programming
+error/          - Error Handling (Appendix)

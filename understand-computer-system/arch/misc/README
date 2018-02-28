@@ -1,0 +1,11 @@
+This directory contains all of the source files for the following:
+
+yas	Y86 assembler
+yis	Y86 instruction level simulator
+hcl2c	HCL to C translator
+
+In addition, it contains files that get used by all three simulators:
+
+isa.{c,h}	Definition and support of the Y86 instruction set architecture
+tkAppInit8.0.c	For compiling simulators with Tcl/Tk graphics environment
+

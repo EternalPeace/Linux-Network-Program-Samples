@@ -1,0 +1,32 @@
+
+ftrace - A program that traces calls to static and dynamic functions,
+system calls, and signals.
+
+Dave O'Hallaron, Carnegie Mellon, 2003.
+
+Files:
+README 		- This file         	 
+debug.{c,h}	- Package that defines a handy debugging printf
+elf.{c,h}	- Package for iterating over Elf symbol tables
+ftrace.{c,h}	- The ftrace implementation
+ftrace		- The ftrace binary
+hello.c		- Test program
+hello*		- Dynamically linked version of test program
+hello-static*   - Statically linked version of test program 
+signalent.h	- Linux signal names
+syscallent.h    - Linux syscall names
+
+Examples: 
+
+Here's a good test:
+./ftrace -s gcc hello.c
+./ftrace -s ./a.out
+
+Here's another:
+./ftrace -s perl -e 'print "hello\n";'
+
+This one is quite fun:
+./ftrace -s xv
+
+Tracing a shell program is also enlightening:
+./ftrace -s /bin/tcsh

@@ -1,0 +1,570 @@
+Basic block profiling finished on Fri Jul 13 16:38:44 2001
+
+File /usr0/bryant/afs/ics/code/opt/options.d, 83 basic blocks 
+
+    Block # 1: executed 42 time(s) address= 0x80498f4 function= match_length      line=   0 file= <none>
+    Block # 2: executed  7 time(s) address= 0x804992f function= match_length      line=  34 file= options.c
+    Block # 3: executed 28 time(s) address= 0x8049940 function= match_length      line=  37 file= options.c
+    Block # 4: executed 25 time(s) address= 0x804994e function= match_length      line=  34 file= options.c
+    Block # 5: executed 42 time(s) address= 0x8049959 function= match_length      line=  39 file= options.c
+    Block # 6: executed  0 time(s) address= 0x8049968 function= usage             line=  40 file= options.c
+    Block # 7: executed  0 time(s) address= 0x80499c4 function= usage             line=  46 file= options.c
+    Block # 8: executed  0 time(s) address= 0x80499d0 function= usage             line=  47 file= options.c
+    Block # 9: executed  0 time(s) address= 0x80499e1 function= usage             line=  47 file= options.c
+    Block #10: executed  0 time(s) address= 0x80499ec function= usage             line=  47 file= options.c
+    Block #11: executed  0 time(s) address= 0x80499f7 function= usage             line=  47 file= options.c
+    Block #12: executed  0 time(s) address= 0x8049a00 function= usage             line=  49 file= options.c
+    Block #13: executed  0 time(s) address= 0x8049a20 function= usage             line=  52 file= options.c
+    Block #14: executed  0 time(s) address= 0x8049a50 function= usage             line=  55 file= options.c
+    Block #15: executed  0 time(s) address= 0x8049a6d function= usage             line=  55 file= options.c
+    Block #16: executed  0 time(s) address= 0x8049a7c function= usage             line=  46 file= options.c
+    Block #17: executed  0 time(s) address= 0x8049a92 function= usage             line=  59 file= options.c
+    Block #18: executed  6 time(s) address= 0x8049ab8 function= find_option       line=  61 file= options.c
+    Block #19: executed  6 time(s) address= 0x8049b04 function= find_option       line=  70 file= options.c
+    Block #20: executed 42 time(s) address= 0x8049b10 function= find_option       line=  71 file= options.c
+    Block #21: executed  7 time(s) address= 0x8049b2c function= find_option       line=  73 file= options.c
+    Block #22: executed 35 time(s) address= 0x8049b40 function= find_option       line=  76 file= options.c
+    Block #23: executed  0 time(s) address= 0x8049b4a function= find_option       line=  76 file= options.c
+    Block #24: executed  0 time(s) address= 0x8049b54 function= find_option       line=  77 file= options.c
+    Block #25: executed 42 time(s) address= 0x8049b61 function= find_option       line=  70 file= options.c
+    Block #26: executed  6 time(s) address= 0x8049b73 function= find_option       line=  80 file= options.c
+    Block #27: executed  0 time(s) address= 0x8049b7d function= find_option       line=  81 file= options.c
+    Block #28: executed  6 time(s) address= 0x8049ba8 function= find_option       line=  83 file= options.c
+    Block #29: executed  0 time(s) address= 0x8049bb4 function= find_option       line=  84 file= options.c
+    Block #30: executed  6 time(s) address= 0x8049bdd function= find_option       line=  87 file= options.c
+    Block #31: executed  6 time(s) address= 0x8049bf0 function= add_int_option    line=  88 file= options.c
+    Block #32: executed  0 time(s) address= 0x8049c54 function= add_double_option line=  96 file= options.c
+    Block #33: executed  1 time(s) address= 0x8049cb8 function= add_string_option line= 104 file= options.c
+    Block #34: executed  1 time(s) address= 0x8049d1c function= parse_options     line= 112 file= options.c
+    Block #35: executed  6 time(s) address= 0x8049d68 function= parse_options     line= 123 file= options.c
+    Block #36: executed  0 time(s) address= 0x8049d79 function= parse_options     line= 125 file= options.c
+    Block #37: executed  0 time(s) address= 0x8049d85 function= parse_options     line= 126 file= options.c
+    Block #38: executed  0 time(s) address= 0x8049d94 function= parse_options     line= 127 file= options.c
+    Block #39: executed  6 time(s) address= 0x8049da2 function= parse_options     line= 130 file= options.c
+    Block #40: executed  0 time(s) address= 0x8049dc1 function= parse_options     line= 133 file= options.c
+    Block #41: executed  6 time(s) address= 0x8049df4 function= parse_options     line= 136 file= options.c
+    Block #42: executed  6 time(s) address= 0x8049e13 function= parse_options     line= 136 file= options.c
+    Block #43: executed  1 time(s) address= 0x8049e1e function= parse_options     line= 136 file= options.c
+    Block #44: executed  0 time(s) address= 0x8049e2d function= parse_options     line= 136 file= options.c
+    Block #45: executed  5 time(s) address= 0x8049e38 function= parse_options     line= 138 file= options.c
+    Block #46: executed  0 time(s) address= 0x8049e65 function= parse_options     line= 139 file= options.c
+    Block #47: executed  0 time(s) address= 0x8049ea0 function= parse_options     line= 144 file= options.c
+    Block #48: executed  0 time(s) address= 0x8049ec6 function= parse_options     line= 145 file= options.c
+    Block #49: executed  0 time(s) address= 0x8049ef5 function= parse_options     line= 148 file= options.c
+    Block #50: executed  1 time(s) address= 0x8049f08 function= parse_options     line= 151 file= options.c
+    Block #51: executed  0 time(s) address= 0x8049f20 function= parse_options     line= 154 file= options.c
+    Block #52: executed  6 time(s) address= 0x8049f50 function= parse_options     line= 121 file= options.c
+    Block #53: executed  1 time(s) address= 0x8049f60 function= parse_options     line= 159 file= options.c
+    Block #54: executed  0 time(s) address= 0x8049f74 function= strsave           line= 160 file= options.c
+    Block #55: executed  0 time(s) address= 0x804a00c function= parse_option_file line= 168 file= options.c
+    Block #56: executed  0 time(s) address= 0x804a050 function= parse_option_file line= 176 file= options.c
+    Block #57: executed  0 time(s) address= 0x804a05c function= parse_option_file line= 177 file= options.c
+    Block #58: executed  0 time(s) address= 0x804a085 function= parse_option_file line= 180 file= options.c
+    Block #59: executed  0 time(s) address= 0x804a0b2 function= parse_option_file line= 181 file= options.c
+    Block #60: executed  0 time(s) address= 0x804a0bd function= parse_option_file line= 181 file= options.c
+    Block #61: executed  0 time(s) address= 0x804a0cc function= parse_option_file line= 181 file= options.c
+    Block #62: executed  0 time(s) address= 0x804a0d7 function= parse_option_file line= 183 file= options.c
+    Block #63: executed  0 time(s) address= 0x804a0fe function= parse_option_file line= 184 file= options.c
+    Block #64: executed  0 time(s) address= 0x804a130 function= parse_option_file line= 189 file= options.c
+    Block #65: executed  0 time(s) address= 0x804a150 function= parse_option_file line= 190 file= options.c
+    Block #66: executed  0 time(s) address= 0x804a176 function= parse_option_file line= 193 file= options.c
+    Block #67: executed  0 time(s) address= 0x804a190 function= parse_option_file line= 196 file= options.c
+    Block #68: executed  0 time(s) address= 0x804a1b0 function= parse_option_file line= 199 file= options.c
+    Block #69: executed  0 time(s) address= 0x804a1e0 function= parse_option_file line= 203 file= options.c
+    Block #70: executed  0 time(s) address= 0x804a205 function= parse_option_file line= 203 file= options.c
+    Block #71: executed  1 time(s) address= 0x804a218 function= show_options      line= 204 file= options.c
+    Block #72: executed  1 time(s) address= 0x804a258 function= show_options      line= 209 file= options.c
+    Block #73: executed  7 time(s) address= 0x804a263 function= show_options      line= 210 file= options.c
+    Block #74: executed  7 time(s) address= 0x804a271 function= show_options      line= 210 file= options.c
+    Block #75: executed  1 time(s) address= 0x804a27c function= show_options      line= 210 file= options.c
+    Block #76: executed  0 time(s) address= 0x804a287 function= show_options      line= 210 file= options.c
+    Block #77: executed  6 time(s) address= 0x804a290 function= show_options      line= 212 file= options.c
+    Block #78: executed  0 time(s) address= 0x804a2a6 function= show_options      line= 215 file= options.c
+    Block #79: executed  1 time(s) address= 0x804a2d0 function= show_options      line= 218 file= options.c
+    Block #80: executed  1 time(s) address= 0x804a2df function= show_options      line= 219 file= options.c
+    Block #81: executed  7 time(s) address= 0x804a2ee function= show_options      line= 219 file= options.c
+    Block #82: executed  7 time(s) address= 0x804a2fd function= show_options      line= 209 file= options.c
+    Block #83: executed  1 time(s) address= 0x804a313 function= show_options      line= 209 file= options.c
+
+File /usr0/bryant/afs/ics/code/opt/dictionary.d, 97 basic blocks 
+
+    Block # 1: executed       0 time(s) address= 0x8048b74 function= lower1        line=   0 file= <none>
+    Block # 2: executed       0 time(s) address= 0x8048bf0 function= lower1        line=  27 file= dictionary.c
+    Block # 3: executed       0 time(s) address= 0x8048c00 function= lower1        line=  28 file= dictionary.c
+    Block # 4: executed       0 time(s) address= 0x8048c0c function= lower1        line=  26 file= dictionary.c
+    Block # 5: executed       0 time(s) address= 0x8048c5a function= lower1        line=  26 file= dictionary.c
+    Block # 6: executed  946596 time(s) address= 0x8048c68 function= lower2        line=  29 file= dictionary.c
+    Block # 7: executed 3989613 time(s) address= 0x8048ce0 function= lower2        line=  38 file= dictionary.c
+    Block # 8: executed  463120 time(s) address= 0x8048cf0 function= lower2        line=  39 file= dictionary.c
+    Block # 9: executed 3989613 time(s) address= 0x8048cfc function= lower2        line=  37 file= dictionary.c
+    Block #10: executed  946596 time(s) address= 0x8048d07 function= lower2        line=  37 file= dictionary.c
+    Block #11: executed   26946 time(s) address= 0x8048d14 function= strlen        line=  40 file= dictionary.c
+    Block #12: executed  194714 time(s) address= 0x8048d50 function= strlen        line=  53 file= dictionary.c
+    Block #13: executed   26946 time(s) address= 0x8048d5d function= strlen        line=  56 file= dictionary.c
+    Block #14: executed       1 time(s) address= 0x8048d68 function= new_table     line=  57 file= dictionary.c
+    Block #15: executed       0 time(s) address= 0x8048db3 function= new_table     line=  76 file= dictionary.c
+    Block #16: executed       1 time(s) address= 0x8048dd6 function= new_table     line=  78 file= dictionary.c
+    Block #17: executed   26946 time(s) address= 0x8048de0 function= new_ele       line=  78 file= dictionary.c
+    Block #18: executed       0 time(s) address= 0x8048e1f function= new_ele       line=  85 file= dictionary.c
+    Block #19: executed   26946 time(s) address= 0x8048e42 function= new_ele       line=  88 file= dictionary.c
+    Block #20: executed       0 time(s) address= 0x8048e5c function= h_mod         line=  91 file= dictionary.c
+    Block #21: executed       0 time(s) address= 0x8048e97 function= h_mod         line= 103 file= dictionary.c
+    Block #22: executed       0 time(s) address= 0x8048ea3 function= h_mod         line= 104 file= dictionary.c
+    Block #23: executed       0 time(s) address= 0x8048ebc function= h_mod         line= 105 file= dictionary.c
+    Block #24: executed       0 time(s) address= 0x8048ecc function= h_add         line= 106 file= dictionary.c
+    Block #25: executed       0 time(s) address= 0x8048f06 function= h_add         line= 114 file= dictionary.c
+    Block #26: executed       0 time(s) address= 0x8048f0e function= h_add         line= 114 file= dictionary.c
+    Block #27: executed       0 time(s) address= 0x8048f1c function= h_add         line= 115 file= dictionary.c
+    Block #28: executed  946596 time(s) address= 0x8048f30 function= h_xor         line= 116 file= dictionary.c
+    Block #29: executed 3989613 time(s) address= 0x8048f70 function= h_xor         line= 124 file= dictionary.c
+    Block #30: executed 4936209 time(s) address= 0x8048f80 function= h_xor         line= 124 file= dictionary.c
+    Block #31: executed  946596 time(s) address= 0x8048f8e function= h_xor         line= 125 file= dictionary.c
+    Block #32: executed   26946 time(s) address= 0x8048fa0 function= save_string   line= 126 file= dictionary.c
+    Block #33: executed       0 time(s) address= 0x8048fed function= save_string   line= 136 file= dictionary.c
+    Block #34: executed   26946 time(s) address= 0x8049010 function= save_string   line= 139 file= dictionary.c
+    Block #35: executed 1177777 time(s) address= 0x804902c function= find_ele_rec  line= 141 file= dictionary.c
+    Block #36: executed   26946 time(s) address= 0x8049064 function= find_ele_rec  line= 148 file= dictionary.c
+    Block #37: executed 1150831 time(s) address= 0x8049084 function= find_ele_rec  line= 151 file= dictionary.c
+    Block #38: executed  919650 time(s) address= 0x804909d function= find_ele_rec  line= 152 file= dictionary.c
+    Block #39: executed   29800 time(s) address= 0x80490b6 function= find_ele_rec  line= 154 file= dictionary.c
+    Block #40: executed  231181 time(s) address= 0x80490d0 function= find_ele_rec  line= 159 file= dictionary.c
+    Block #41: executed 1150831 time(s) address= 0x80490e6 function= find_ele_rec  line= 160 file= dictionary.c
+    Block #42: executed 1177777 time(s) address= 0x80490ee function= find_ele_rec  line= 160 file= dictionary.c
+    Block #43: executed       0 time(s) address= 0x8049100 function= find_ele_iter line= 161 file= dictionary.c
+    Block #44: executed       0 time(s) address= 0x8049138 function= find_ele_iter line= 168 file= dictionary.c
+    Block #45: executed       0 time(s) address= 0x8049154 function= find_ele_iter line= 170 file= dictionary.c
+    Block #46: executed       0 time(s) address= 0x804916d function= find_ele_iter line= 172 file= dictionary.c
+    Block #47: executed       0 time(s) address= 0x804917e function= find_ele_iter line= 175 file= dictionary.c
+    Block #48: executed       0 time(s) address= 0x8049188 function= find_ele_iter line= 167 file= dictionary.c
+    Block #49: executed       0 time(s) address= 0x8049195 function= find_ele_iter line= 178 file= dictionary.c
+    Block #50: executed       0 time(s) address= 0x80491bb function= find_ele_iter line= 181 file= dictionary.c
+    Block #51: executed  305487 time(s) address= 0x80491cc function= compare_ele   line= 182 file= dictionary.c
+    Block #52: executed       1 time(s) address= 0x8049210 function= sort_words    line= 195 file= dictionary.c
+    Block #53: executed   10007 time(s) address= 0x8049265 function= sort_words    line= 207 file= dictionary.c
+    Block #54: executed   26946 time(s) address= 0x8049280 function= sort_words    line= 208 file= dictionary.c
+    Block #55: executed   26946 time(s) address= 0x804928c function= sort_words    line= 209 file= dictionary.c
+    Block #56: executed       0 time(s) address= 0x80492a0 function= sort_words    line= 211 file= dictionary.c
+    Block #57: executed       0 time(s) address= 0x80492af function= sort_words    line= 211 file= dictionary.c
+    Block #58: executed       0 time(s) address= 0x80492c0 function= sort_words    line= 212 file= dictionary.c
+    Block #59: executed       0 time(s) address= 0x80492d2 function= sort_words    line= 211 file= dictionary.c
+    Block #60: executed       0 time(s) address= 0x80492dc function= sort_words    line= 211 file= dictionary.c
+    Block #61: executed       0 time(s) address= 0x80492ea function= sort_words    line= 213 file= dictionary.c
+    Block #62: executed   26946 time(s) address= 0x80492f3 function= sort_words    line= 207 file= dictionary.c
+    Block #63: executed   10007 time(s) address= 0x8049306 function= sort_words    line= 206 file= dictionary.c
+    Block #64: executed       1 time(s) address= 0x804931b function= sort_words    line= 217 file= dictionary.c
+    Block #65: executed       1 time(s) address= 0x8049327 function= sort_words    line= 218 file= dictionary.c
+    Block #66: executed       1 time(s) address= 0x804933e function= sort_words    line= 220 file= dictionary.c
+    Block #67: executed   26945 time(s) address= 0x8049352 function= sort_words    line= 222 file= dictionary.c
+    Block #68: executed       1 time(s) address= 0x8049367 function= sort_words    line= 223 file= dictionary.c
+    Block #69: executed  946596 time(s) address= 0x8049390 function= insert_string line= 226 file= dictionary.c
+    Block #70: executed       1 time(s) address= 0x8049400 function= init_token    line= 237 file= dictionary.c
+    Block #71: executed  946597 time(s) address= 0x8049444 function= get_token     line= 247 file= dictionary.c
+    Block #72: executed  172949 time(s) address= 0x8049472 function= get_token     line= 262 file= dictionary.c
+    Block #73: executed       1 time(s) address= 0x8049497 function= get_token     line= 263 file= dictionary.c
+    Block #74: executed  172948 time(s) address= 0x80494a1 function= get_token     line= 265 file= dictionary.c
+    Block #75: executed  994450 time(s) address= 0x80494cb function= get_token     line= 257 file= dictionary.c
+    Block #76: executed  994449 time(s) address= 0x80494da function= get_token     line= 258 file= dictionary.c
+    Block #77: executed  946596 time(s) address= 0x80494fb function= get_token     line= 269 file= dictionary.c
+    Block #78: executed  946597 time(s) address= 0x8049507 function= get_token     line= 270 file= dictionary.c
+    Block #79: executed       1 time(s) address= 0x8049514 function= word_freq     line= 271 file= dictionary.c
+    Block #80: executed  946596 time(s) address= 0x8049566 function= word_freq     line= 287 file= dictionary.c
+    Block #81: executed  946597 time(s) address= 0x804957e function= word_freq     line= 288 file= dictionary.c
+    Block #82: executed       1 time(s) address= 0x804958d function= word_freq     line= 289 file= dictionary.c
+    Block #83: executed       1 time(s) address= 0x8049597 function= word_freq     line= 290 file= dictionary.c
+    Block #84: executed       1 time(s) address= 0x80495b2 function= word_freq     line= 291 file= dictionary.c
+    Block #85: executed      10 time(s) address= 0x80495c0 function= word_freq     line= 292 file= dictionary.c
+    Block #86: executed      10 time(s) address= 0x80495e4 function= word_freq     line= 294 file= dictionary.c
+    Block #87: executed       1 time(s) address= 0x80495ef function= word_freq     line= 296 file= dictionary.c
+    Block #88: executed       1 time(s) address= 0x8049624 function= main          line= 298 file= dictionary.c
+    Block #89: executed       0 time(s) address= 0x8049789 function= main          line= 323 file= dictionary.c
+    Block #90: executed       1 time(s) address= 0x80497b0 function= main          line= 326 file= dictionary.c
+    Block #91: executed       0 time(s) address= 0x80497be function= main          line= 327 file= dictionary.c
+    Block #92: executed       1 time(s) address= 0x80497e2 function= main          line= 330 file= dictionary.c
+    Block #93: executed       0 time(s) address= 0x80497f0 function= main          line= 331 file= dictionary.c
+    Block #94: executed       1 time(s) address= 0x8049814 function= main          line= 334 file= dictionary.c
+    Block #95: executed       1 time(s) address= 0x8049821 function= main          line= 335 file= dictionary.c
+    Block #96: executed       0 time(s) address= 0x804983e function= main          line= 337 file= dictionary.c
+    Block #97: executed       1 time(s) address= 0x8049865 function= main          line= 341 file= dictionary.c
+
+
+
+Basic block profiling finished on Fri Jul 13 16:39:49 2001
+
+File /usr0/bryant/afs/ics/code/opt/options.d, 83 basic blocks 
+
+    Block # 1: executed 42 time(s) address= 0x80498f4 function= match_length      line=   0 file= <none>
+    Block # 2: executed  7 time(s) address= 0x804992f function= match_length      line=  34 file= options.c
+    Block # 3: executed 28 time(s) address= 0x8049940 function= match_length      line=  37 file= options.c
+    Block # 4: executed 25 time(s) address= 0x804994e function= match_length      line=  34 file= options.c
+    Block # 5: executed 42 time(s) address= 0x8049959 function= match_length      line=  39 file= options.c
+    Block # 6: executed  0 time(s) address= 0x8049968 function= usage             line=  40 file= options.c
+    Block # 7: executed  0 time(s) address= 0x80499c4 function= usage             line=  46 file= options.c
+    Block # 8: executed  0 time(s) address= 0x80499d0 function= usage             line=  47 file= options.c
+    Block # 9: executed  0 time(s) address= 0x80499e1 function= usage             line=  47 file= options.c
+    Block #10: executed  0 time(s) address= 0x80499ec function= usage             line=  47 file= options.c
+    Block #11: executed  0 time(s) address= 0x80499f7 function= usage             line=  47 file= options.c
+    Block #12: executed  0 time(s) address= 0x8049a00 function= usage             line=  49 file= options.c
+    Block #13: executed  0 time(s) address= 0x8049a20 function= usage             line=  52 file= options.c
+    Block #14: executed  0 time(s) address= 0x8049a50 function= usage             line=  55 file= options.c
+    Block #15: executed  0 time(s) address= 0x8049a6d function= usage             line=  55 file= options.c
+    Block #16: executed  0 time(s) address= 0x8049a7c function= usage             line=  46 file= options.c
+    Block #17: executed  0 time(s) address= 0x8049a92 function= usage             line=  59 file= options.c
+    Block #18: executed  6 time(s) address= 0x8049ab8 function= find_option       line=  61 file= options.c
+    Block #19: executed  6 time(s) address= 0x8049b04 function= find_option       line=  70 file= options.c
+    Block #20: executed 42 time(s) address= 0x8049b10 function= find_option       line=  71 file= options.c
+    Block #21: executed  7 time(s) address= 0x8049b2c function= find_option       line=  73 file= options.c
+    Block #22: executed 35 time(s) address= 0x8049b40 function= find_option       line=  76 file= options.c
+    Block #23: executed  0 time(s) address= 0x8049b4a function= find_option       line=  76 file= options.c
+    Block #24: executed  0 time(s) address= 0x8049b54 function= find_option       line=  77 file= options.c
+    Block #25: executed 42 time(s) address= 0x8049b61 function= find_option       line=  70 file= options.c
+    Block #26: executed  6 time(s) address= 0x8049b73 function= find_option       line=  80 file= options.c
+    Block #27: executed  0 time(s) address= 0x8049b7d function= find_option       line=  81 file= options.c
+    Block #28: executed  6 time(s) address= 0x8049ba8 function= find_option       line=  83 file= options.c
+    Block #29: executed  0 time(s) address= 0x8049bb4 function= find_option       line=  84 file= options.c
+    Block #30: executed  6 time(s) address= 0x8049bdd function= find_option       line=  87 file= options.c
+    Block #31: executed  6 time(s) address= 0x8049bf0 function= add_int_option    line=  88 file= options.c
+    Block #32: executed  0 time(s) address= 0x8049c54 function= add_double_option line=  96 file= options.c
+    Block #33: executed  1 time(s) address= 0x8049cb8 function= add_string_option line= 104 file= options.c
+    Block #34: executed  1 time(s) address= 0x8049d1c function= parse_options     line= 112 file= options.c
+    Block #35: executed  6 time(s) address= 0x8049d68 function= parse_options     line= 123 file= options.c
+    Block #36: executed  0 time(s) address= 0x8049d79 function= parse_options     line= 125 file= options.c
+    Block #37: executed  0 time(s) address= 0x8049d85 function= parse_options     line= 126 file= options.c
+    Block #38: executed  0 time(s) address= 0x8049d94 function= parse_options     line= 127 file= options.c
+    Block #39: executed  6 time(s) address= 0x8049da2 function= parse_options     line= 130 file= options.c
+    Block #40: executed  0 time(s) address= 0x8049dc1 function= parse_options     line= 133 file= options.c
+    Block #41: executed  6 time(s) address= 0x8049df4 function= parse_options     line= 136 file= options.c
+    Block #42: executed  6 time(s) address= 0x8049e13 function= parse_options     line= 136 file= options.c
+    Block #43: executed  1 time(s) address= 0x8049e1e function= parse_options     line= 136 file= options.c
+    Block #44: executed  0 time(s) address= 0x8049e2d function= parse_options     line= 136 file= options.c
+    Block #45: executed  5 time(s) address= 0x8049e38 function= parse_options     line= 138 file= options.c
+    Block #46: executed  0 time(s) address= 0x8049e65 function= parse_options     line= 139 file= options.c
+    Block #47: executed  0 time(s) address= 0x8049ea0 function= parse_options     line= 144 file= options.c
+    Block #48: executed  0 time(s) address= 0x8049ec6 function= parse_options     line= 145 file= options.c
+    Block #49: executed  0 time(s) address= 0x8049ef5 function= parse_options     line= 148 file= options.c
+    Block #50: executed  1 time(s) address= 0x8049f08 function= parse_options     line= 151 file= options.c
+    Block #51: executed  0 time(s) address= 0x8049f20 function= parse_options     line= 154 file= options.c
+    Block #52: executed  6 time(s) address= 0x8049f50 function= parse_options     line= 121 file= options.c
+    Block #53: executed  1 time(s) address= 0x8049f60 function= parse_options     line= 159 file= options.c
+    Block #54: executed  0 time(s) address= 0x8049f74 function= strsave           line= 160 file= options.c
+    Block #55: executed  0 time(s) address= 0x804a00c function= parse_option_file line= 168 file= options.c
+    Block #56: executed  0 time(s) address= 0x804a050 function= parse_option_file line= 176 file= options.c
+    Block #57: executed  0 time(s) address= 0x804a05c function= parse_option_file line= 177 file= options.c
+    Block #58: executed  0 time(s) address= 0x804a085 function= parse_option_file line= 180 file= options.c
+    Block #59: executed  0 time(s) address= 0x804a0b2 function= parse_option_file line= 181 file= options.c
+    Block #60: executed  0 time(s) address= 0x804a0bd function= parse_option_file line= 181 file= options.c
+    Block #61: executed  0 time(s) address= 0x804a0cc function= parse_option_file line= 181 file= options.c
+    Block #62: executed  0 time(s) address= 0x804a0d7 function= parse_option_file line= 183 file= options.c
+    Block #63: executed  0 time(s) address= 0x804a0fe function= parse_option_file line= 184 file= options.c
+    Block #64: executed  0 time(s) address= 0x804a130 function= parse_option_file line= 189 file= options.c
+    Block #65: executed  0 time(s) address= 0x804a150 function= parse_option_file line= 190 file= options.c
+    Block #66: executed  0 time(s) address= 0x804a176 function= parse_option_file line= 193 file= options.c
+    Block #67: executed  0 time(s) address= 0x804a190 function= parse_option_file line= 196 file= options.c
+    Block #68: executed  0 time(s) address= 0x804a1b0 function= parse_option_file line= 199 file= options.c
+    Block #69: executed  0 time(s) address= 0x804a1e0 function= parse_option_file line= 203 file= options.c
+    Block #70: executed  0 time(s) address= 0x804a205 function= parse_option_file line= 203 file= options.c
+    Block #71: executed  1 time(s) address= 0x804a218 function= show_options      line= 204 file= options.c
+    Block #72: executed  1 time(s) address= 0x804a258 function= show_options      line= 209 file= options.c
+    Block #73: executed  7 time(s) address= 0x804a263 function= show_options      line= 210 file= options.c
+    Block #74: executed  7 time(s) address= 0x804a271 function= show_options      line= 210 file= options.c
+    Block #75: executed  1 time(s) address= 0x804a27c function= show_options      line= 210 file= options.c
+    Block #76: executed  0 time(s) address= 0x804a287 function= show_options      line= 210 file= options.c
+    Block #77: executed  6 time(s) address= 0x804a290 function= show_options      line= 212 file= options.c
+    Block #78: executed  0 time(s) address= 0x804a2a6 function= show_options      line= 215 file= options.c
+    Block #79: executed  1 time(s) address= 0x804a2d0 function= show_options      line= 218 file= options.c
+    Block #80: executed  1 time(s) address= 0x804a2df function= show_options      line= 219 file= options.c
+    Block #81: executed  7 time(s) address= 0x804a2ee function= show_options      line= 219 file= options.c
+    Block #82: executed  7 time(s) address= 0x804a2fd function= show_options      line= 209 file= options.c
+    Block #83: executed  1 time(s) address= 0x804a313 function= show_options      line= 209 file= options.c
+
+File /usr0/bryant/afs/ics/code/opt/dictionary.d, 97 basic blocks 
+
+    Block # 1: executed       0 time(s) address= 0x8048b74 function= lower1        line=   0 file= <none>
+    Block # 2: executed       0 time(s) address= 0x8048bf0 function= lower1        line=  27 file= dictionary.c
+    Block # 3: executed       0 time(s) address= 0x8048c00 function= lower1        line=  28 file= dictionary.c
+    Block # 4: executed       0 time(s) address= 0x8048c0c function= lower1        line=  26 file= dictionary.c
+    Block # 5: executed       0 time(s) address= 0x8048c5a function= lower1        line=  26 file= dictionary.c
+    Block # 6: executed  946596 time(s) address= 0x8048c68 function= lower2        line=  29 file= dictionary.c
+    Block # 7: executed 3989613 time(s) address= 0x8048ce0 function= lower2        line=  38 file= dictionary.c
+    Block # 8: executed  463120 time(s) address= 0x8048cf0 function= lower2        line=  39 file= dictionary.c
+    Block # 9: executed 3989613 time(s) address= 0x8048cfc function= lower2        line=  37 file= dictionary.c
+    Block #10: executed  946596 time(s) address= 0x8048d07 function= lower2        line=  37 file= dictionary.c
+    Block #11: executed   26946 time(s) address= 0x8048d14 function= strlen        line=  40 file= dictionary.c
+    Block #12: executed  194714 time(s) address= 0x8048d50 function= strlen        line=  53 file= dictionary.c
+    Block #13: executed   26946 time(s) address= 0x8048d5d function= strlen        line=  56 file= dictionary.c
+    Block #14: executed       1 time(s) address= 0x8048d68 function= new_table     line=  57 file= dictionary.c
+    Block #15: executed       0 time(s) address= 0x8048db3 function= new_table     line=  76 file= dictionary.c
+    Block #16: executed       1 time(s) address= 0x8048dd6 function= new_table     line=  78 file= dictionary.c
+    Block #17: executed   26946 time(s) address= 0x8048de0 function= new_ele       line=  78 file= dictionary.c
+    Block #18: executed       0 time(s) address= 0x8048e1f function= new_ele       line=  85 file= dictionary.c
+    Block #19: executed   26946 time(s) address= 0x8048e42 function= new_ele       line=  88 file= dictionary.c
+    Block #20: executed       0 time(s) address= 0x8048e5c function= h_mod         line=  91 file= dictionary.c
+    Block #21: executed       0 time(s) address= 0x8048e97 function= h_mod         line= 103 file= dictionary.c
+    Block #22: executed       0 time(s) address= 0x8048ea3 function= h_mod         line= 104 file= dictionary.c
+    Block #23: executed       0 time(s) address= 0x8048ebc function= h_mod         line= 105 file= dictionary.c
+    Block #24: executed       0 time(s) address= 0x8048ecc function= h_add         line= 106 file= dictionary.c
+    Block #25: executed       0 time(s) address= 0x8048f06 function= h_add         line= 114 file= dictionary.c
+    Block #26: executed       0 time(s) address= 0x8048f0e function= h_add         line= 114 file= dictionary.c
+    Block #27: executed       0 time(s) address= 0x8048f1c function= h_add         line= 115 file= dictionary.c
+    Block #28: executed  946596 time(s) address= 0x8048f30 function= h_xor         line= 116 file= dictionary.c
+    Block #29: executed 3989613 time(s) address= 0x8048f70 function= h_xor         line= 124 file= dictionary.c
+    Block #30: executed 4936209 time(s) address= 0x8048f80 function= h_xor         line= 124 file= dictionary.c
+    Block #31: executed  946596 time(s) address= 0x8048f8e function= h_xor         line= 125 file= dictionary.c
+    Block #32: executed   26946 time(s) address= 0x8048fa0 function= save_string   line= 126 file= dictionary.c
+    Block #33: executed       0 time(s) address= 0x8048fed function= save_string   line= 136 file= dictionary.c
+    Block #34: executed   26946 time(s) address= 0x8049010 function= save_string   line= 139 file= dictionary.c
+    Block #35: executed 1177777 time(s) address= 0x804902c function= find_ele_rec  line= 141 file= dictionary.c
+    Block #36: executed   26946 time(s) address= 0x8049064 function= find_ele_rec  line= 148 file= dictionary.c
+    Block #37: executed 1150831 time(s) address= 0x8049084 function= find_ele_rec  line= 151 file= dictionary.c
+    Block #38: executed  919650 time(s) address= 0x804909d function= find_ele_rec  line= 152 file= dictionary.c
+    Block #39: executed   29800 time(s) address= 0x80490b6 function= find_ele_rec  line= 154 file= dictionary.c
+    Block #40: executed  231181 time(s) address= 0x80490d0 function= find_ele_rec  line= 159 file= dictionary.c
+    Block #41: executed 1150831 time(s) address= 0x80490e6 function= find_ele_rec  line= 160 file= dictionary.c
+    Block #42: executed 1177777 time(s) address= 0x80490ee function= find_ele_rec  line= 160 file= dictionary.c
+    Block #43: executed       0 time(s) address= 0x8049100 function= find_ele_iter line= 161 file= dictionary.c
+    Block #44: executed       0 time(s) address= 0x8049138 function= find_ele_iter line= 168 file= dictionary.c
+    Block #45: executed       0 time(s) address= 0x8049154 function= find_ele_iter line= 170 file= dictionary.c
+    Block #46: executed       0 time(s) address= 0x804916d function= find_ele_iter line= 172 file= dictionary.c
+    Block #47: executed       0 time(s) address= 0x804917e function= find_ele_iter line= 175 file= dictionary.c
+    Block #48: executed       0 time(s) address= 0x8049188 function= find_ele_iter line= 167 file= dictionary.c
+    Block #49: executed       0 time(s) address= 0x8049195 function= find_ele_iter line= 178 file= dictionary.c
+    Block #50: executed       0 time(s) address= 0x80491bb function= find_ele_iter line= 181 file= dictionary.c
+    Block #51: executed  305487 time(s) address= 0x80491cc function= compare_ele   line= 182 file= dictionary.c
+    Block #52: executed       1 time(s) address= 0x8049210 function= sort_words    line= 195 file= dictionary.c
+    Block #53: executed   10007 time(s) address= 0x8049265 function= sort_words    line= 207 file= dictionary.c
+    Block #54: executed   26946 time(s) address= 0x8049280 function= sort_words    line= 208 file= dictionary.c
+    Block #55: executed   26946 time(s) address= 0x804928c function= sort_words    line= 209 file= dictionary.c
+    Block #56: executed       0 time(s) address= 0x80492a0 function= sort_words    line= 211 file= dictionary.c
+    Block #57: executed       0 time(s) address= 0x80492af function= sort_words    line= 211 file= dictionary.c
+    Block #58: executed       0 time(s) address= 0x80492c0 function= sort_words    line= 212 file= dictionary.c
+    Block #59: executed       0 time(s) address= 0x80492d2 function= sort_words    line= 211 file= dictionary.c
+    Block #60: executed       0 time(s) address= 0x80492dc function= sort_words    line= 211 file= dictionary.c
+    Block #61: executed       0 time(s) address= 0x80492ea function= sort_words    line= 213 file= dictionary.c
+    Block #62: executed   26946 time(s) address= 0x80492f3 function= sort_words    line= 207 file= dictionary.c
+    Block #63: executed   10007 time(s) address= 0x8049306 function= sort_words    line= 206 file= dictionary.c
+    Block #64: executed       1 time(s) address= 0x804931b function= sort_words    line= 217 file= dictionary.c
+    Block #65: executed       1 time(s) address= 0x8049327 function= sort_words    line= 218 file= dictionary.c
+    Block #66: executed       1 time(s) address= 0x804933e function= sort_words    line= 220 file= dictionary.c
+    Block #67: executed   26945 time(s) address= 0x8049352 function= sort_words    line= 222 file= dictionary.c
+    Block #68: executed       1 time(s) address= 0x8049367 function= sort_words    line= 223 file= dictionary.c
+    Block #69: executed  946596 time(s) address= 0x8049390 function= insert_string line= 226 file= dictionary.c
+    Block #70: executed       1 time(s) address= 0x8049400 function= init_token    line= 237 file= dictionary.c
+    Block #71: executed  946597 time(s) address= 0x8049444 function= get_token     line= 247 file= dictionary.c
+    Block #72: executed  172949 time(s) address= 0x8049472 function= get_token     line= 262 file= dictionary.c
+    Block #73: executed       1 time(s) address= 0x8049497 function= get_token     line= 263 file= dictionary.c
+    Block #74: executed  172948 time(s) address= 0x80494a1 function= get_token     line= 265 file= dictionary.c
+    Block #75: executed  994450 time(s) address= 0x80494cb function= get_token     line= 257 file= dictionary.c
+    Block #76: executed  994449 time(s) address= 0x80494da function= get_token     line= 258 file= dictionary.c
+    Block #77: executed  946596 time(s) address= 0x80494fb function= get_token     line= 269 file= dictionary.c
+    Block #78: executed  946597 time(s) address= 0x8049507 function= get_token     line= 270 file= dictionary.c
+    Block #79: executed       1 time(s) address= 0x8049514 function= word_freq     line= 271 file= dictionary.c
+    Block #80: executed  946596 time(s) address= 0x8049566 function= word_freq     line= 287 file= dictionary.c
+    Block #81: executed  946597 time(s) address= 0x804957e function= word_freq     line= 288 file= dictionary.c
+    Block #82: executed       1 time(s) address= 0x804958d function= word_freq     line= 289 file= dictionary.c
+    Block #83: executed       1 time(s) address= 0x8049597 function= word_freq     line= 290 file= dictionary.c
+    Block #84: executed       1 time(s) address= 0x80495b2 function= word_freq     line= 291 file= dictionary.c
+    Block #85: executed      10 time(s) address= 0x80495c0 function= word_freq     line= 292 file= dictionary.c
+    Block #86: executed      10 time(s) address= 0x80495e4 function= word_freq     line= 294 file= dictionary.c
+    Block #87: executed       1 time(s) address= 0x80495ef function= word_freq     line= 296 file= dictionary.c
+    Block #88: executed       1 time(s) address= 0x8049624 function= main          line= 298 file= dictionary.c
+    Block #89: executed       0 time(s) address= 0x8049789 function= main          line= 323 file= dictionary.c
+    Block #90: executed       1 time(s) address= 0x80497b0 function= main          line= 326 file= dictionary.c
+    Block #91: executed       0 time(s) address= 0x80497be function= main          line= 327 file= dictionary.c
+    Block #92: executed       1 time(s) address= 0x80497e2 function= main          line= 330 file= dictionary.c
+    Block #93: executed       0 time(s) address= 0x80497f0 function= main          line= 331 file= dictionary.c
+    Block #94: executed       1 time(s) address= 0x8049814 function= main          line= 334 file= dictionary.c
+    Block #95: executed       1 time(s) address= 0x8049821 function= main          line= 335 file= dictionary.c
+    Block #96: executed       0 time(s) address= 0x804983e function= main          line= 337 file= dictionary.c
+    Block #97: executed       1 time(s) address= 0x8049865 function= main          line= 341 file= dictionary.c
+
+
+
+Basic block profiling finished on Fri Jul 13 16:40:23 2001
+
+File /usr0/bryant/afs/ics/code/opt/options.d, 83 basic blocks 
+
+    Block # 1: executed 42 time(s) address= 0x80498f4 function= match_length      line=   0 file= <none>
+    Block # 2: executed  7 time(s) address= 0x804992f function= match_length      line=  34 file= options.c
+    Block # 3: executed 28 time(s) address= 0x8049940 function= match_length      line=  37 file= options.c
+    Block # 4: executed 25 time(s) address= 0x804994e function= match_length      line=  34 file= options.c
+    Block # 5: executed 42 time(s) address= 0x8049959 function= match_length      line=  39 file= options.c
+    Block # 6: executed  0 time(s) address= 0x8049968 function= usage             line=  40 file= options.c
+    Block # 7: executed  0 time(s) address= 0x80499c4 function= usage             line=  46 file= options.c
+    Block # 8: executed  0 time(s) address= 0x80499d0 function= usage             line=  47 file= options.c
+    Block # 9: executed  0 time(s) address= 0x80499e1 function= usage             line=  47 file= options.c
+    Block #10: executed  0 time(s) address= 0x80499ec function= usage             line=  47 file= options.c
+    Block #11: executed  0 time(s) address= 0x80499f7 function= usage             line=  47 file= options.c
+    Block #12: executed  0 time(s) address= 0x8049a00 function= usage             line=  49 file= options.c
+    Block #13: executed  0 time(s) address= 0x8049a20 function= usage             line=  52 file= options.c
+    Block #14: executed  0 time(s) address= 0x8049a50 function= usage             line=  55 file= options.c
+    Block #15: executed  0 time(s) address= 0x8049a6d function= usage             line=  55 file= options.c
+    Block #16: executed  0 time(s) address= 0x8049a7c function= usage             line=  46 file= options.c
+    Block #17: executed  0 time(s) address= 0x8049a92 function= usage             line=  59 file= options.c
+    Block #18: executed  6 time(s) address= 0x8049ab8 function= find_option       line=  61 file= options.c
+    Block #19: executed  6 time(s) address= 0x8049b04 function= find_option       line=  70 file= options.c
+    Block #20: executed 42 time(s) address= 0x8049b10 function= find_option       line=  71 file= options.c
+    Block #21: executed  7 time(s) address= 0x8049b2c function= find_option       line=  73 file= options.c
+    Block #22: executed 35 time(s) address= 0x8049b40 function= find_option       line=  76 file= options.c
+    Block #23: executed  0 time(s) address= 0x8049b4a function= find_option       line=  76 file= options.c
+    Block #24: executed  0 time(s) address= 0x8049b54 function= find_option       line=  77 file= options.c
+    Block #25: executed 42 time(s) address= 0x8049b61 function= find_option       line=  70 file= options.c
+    Block #26: executed  6 time(s) address= 0x8049b73 function= find_option       line=  80 file= options.c
+    Block #27: executed  0 time(s) address= 0x8049b7d function= find_option       line=  81 file= options.c
+    Block #28: executed  6 time(s) address= 0x8049ba8 function= find_option       line=  83 file= options.c
+    Block #29: executed  0 time(s) address= 0x8049bb4 function= find_option       line=  84 file= options.c
+    Block #30: executed  6 time(s) address= 0x8049bdd function= find_option       line=  87 file= options.c
+    Block #31: executed  6 time(s) address= 0x8049bf0 function= add_int_option    line=  88 file= options.c
+    Block #32: executed  0 time(s) address= 0x8049c54 function= add_double_option line=  96 file= options.c
+    Block #33: executed  1 time(s) address= 0x8049cb8 function= add_string_option line= 104 file= options.c
+    Block #34: executed  1 time(s) address= 0x8049d1c function= parse_options     line= 112 file= options.c
+    Block #35: executed  6 time(s) address= 0x8049d68 function= parse_options     line= 123 file= options.c
+    Block #36: executed  0 time(s) address= 0x8049d79 function= parse_options     line= 125 file= options.c
+    Block #37: executed  0 time(s) address= 0x8049d85 function= parse_options     line= 126 file= options.c
+    Block #38: executed  0 time(s) address= 0x8049d94 function= parse_options     line= 127 file= options.c
+    Block #39: executed  6 time(s) address= 0x8049da2 function= parse_options     line= 130 file= options.c
+    Block #40: executed  0 time(s) address= 0x8049dc1 function= parse_options     line= 133 file= options.c
+    Block #41: executed  6 time(s) address= 0x8049df4 function= parse_options     line= 136 file= options.c
+    Block #42: executed  6 time(s) address= 0x8049e13 function= parse_options     line= 136 file= options.c
+    Block #43: executed  1 time(s) address= 0x8049e1e function= parse_options     line= 136 file= options.c
+    Block #44: executed  0 time(s) address= 0x8049e2d function= parse_options     line= 136 file= options.c
+    Block #45: executed  5 time(s) address= 0x8049e38 function= parse_options     line= 138 file= options.c
+    Block #46: executed  0 time(s) address= 0x8049e65 function= parse_options     line= 139 file= options.c
+    Block #47: executed  0 time(s) address= 0x8049ea0 function= parse_options     line= 144 file= options.c
+    Block #48: executed  0 time(s) address= 0x8049ec6 function= parse_options     line= 145 file= options.c
+    Block #49: executed  0 time(s) address= 0x8049ef5 function= parse_options     line= 148 file= options.c
+    Block #50: executed  1 time(s) address= 0x8049f08 function= parse_options     line= 151 file= options.c
+    Block #51: executed  0 time(s) address= 0x8049f20 function= parse_options     line= 154 file= options.c
+    Block #52: executed  6 time(s) address= 0x8049f50 function= parse_options     line= 121 file= options.c
+    Block #53: executed  1 time(s) address= 0x8049f60 function= parse_options     line= 159 file= options.c
+    Block #54: executed  0 time(s) address= 0x8049f74 function= strsave           line= 160 file= options.c
+    Block #55: executed  0 time(s) address= 0x804a00c function= parse_option_file line= 168 file= options.c
+    Block #56: executed  0 time(s) address= 0x804a050 function= parse_option_file line= 176 file= options.c
+    Block #57: executed  0 time(s) address= 0x804a05c function= parse_option_file line= 177 file= options.c
+    Block #58: executed  0 time(s) address= 0x804a085 function= parse_option_file line= 180 file= options.c
+    Block #59: executed  0 time(s) address= 0x804a0b2 function= parse_option_file line= 181 file= options.c
+    Block #60: executed  0 time(s) address= 0x804a0bd function= parse_option_file line= 181 file= options.c
+    Block #61: executed  0 time(s) address= 0x804a0cc function= parse_option_file line= 181 file= options.c
+    Block #62: executed  0 time(s) address= 0x804a0d7 function= parse_option_file line= 183 file= options.c
+    Block #63: executed  0 time(s) address= 0x804a0fe function= parse_option_file line= 184 file= options.c
+    Block #64: executed  0 time(s) address= 0x804a130 function= parse_option_file line= 189 file= options.c
+    Block #65: executed  0 time(s) address= 0x804a150 function= parse_option_file line= 190 file= options.c
+    Block #66: executed  0 time(s) address= 0x804a176 function= parse_option_file line= 193 file= options.c
+    Block #67: executed  0 time(s) address= 0x804a190 function= parse_option_file line= 196 file= options.c
+    Block #68: executed  0 time(s) address= 0x804a1b0 function= parse_option_file line= 199 file= options.c
+    Block #69: executed  0 time(s) address= 0x804a1e0 function= parse_option_file line= 203 file= options.c
+    Block #70: executed  0 time(s) address= 0x804a205 function= parse_option_file line= 203 file= options.c
+    Block #71: executed  1 time(s) address= 0x804a218 function= show_options      line= 204 file= options.c
+    Block #72: executed  1 time(s) address= 0x804a258 function= show_options      line= 209 file= options.c
+    Block #73: executed  7 time(s) address= 0x804a263 function= show_options      line= 210 file= options.c
+    Block #74: executed  7 time(s) address= 0x804a271 function= show_options      line= 210 file= options.c
+    Block #75: executed  1 time(s) address= 0x804a27c function= show_options      line= 210 file= options.c
+    Block #76: executed  0 time(s) address= 0x804a287 function= show_options      line= 210 file= options.c
+    Block #77: executed  6 time(s) address= 0x804a290 function= show_options      line= 212 file= options.c
+    Block #78: executed  0 time(s) address= 0x804a2a6 function= show_options      line= 215 file= options.c
+    Block #79: executed  1 time(s) address= 0x804a2d0 function= show_options      line= 218 file= options.c
+    Block #80: executed  1 time(s) address= 0x804a2df function= show_options      line= 219 file= options.c
+    Block #81: executed  7 time(s) address= 0x804a2ee function= show_options      line= 219 file= options.c
+    Block #82: executed  7 time(s) address= 0x804a2fd function= show_options      line= 209 file= options.c
+    Block #83: executed  1 time(s) address= 0x804a313 function= show_options      line= 209 file= options.c
+
+File /usr0/bryant/afs/ics/code/opt/dictionary.d, 97 basic blocks 
+
+    Block # 1: executed       0 time(s) address= 0x8048b74 function= lower1        line=   0 file= <none>
+    Block # 2: executed       0 time(s) address= 0x8048bf0 function= lower1        line=  27 file= dictionary.c
+    Block # 3: executed       0 time(s) address= 0x8048c00 function= lower1        line=  28 file= dictionary.c
+    Block # 4: executed       0 time(s) address= 0x8048c0c function= lower1        line=  26 file= dictionary.c
+    Block # 5: executed       0 time(s) address= 0x8048c5a function= lower1        line=  26 file= dictionary.c
+    Block # 6: executed  946596 time(s) address= 0x8048c68 function= lower2        line=  29 file= dictionary.c
+    Block # 7: executed 3989613 time(s) address= 0x8048ce0 function= lower2        line=  38 file= dictionary.c
+    Block # 8: executed  463120 time(s) address= 0x8048cf0 function= lower2        line=  39 file= dictionary.c
+    Block # 9: executed 3989613 time(s) address= 0x8048cfc function= lower2        line=  37 file= dictionary.c
+    Block #10: executed  946596 time(s) address= 0x8048d07 function= lower2        line=  37 file= dictionary.c
+    Block #11: executed   26946 time(s) address= 0x8048d14 function= strlen        line=  40 file= dictionary.c
+    Block #12: executed  194714 time(s) address= 0x8048d50 function= strlen        line=  53 file= dictionary.c
+    Block #13: executed   26946 time(s) address= 0x8048d5d function= strlen        line=  56 file= dictionary.c
+    Block #14: executed       1 time(s) address= 0x8048d68 function= new_table     line=  57 file= dictionary.c
+    Block #15: executed       0 time(s) address= 0x8048db3 function= new_table     line=  76 file= dictionary.c
+    Block #16: executed       1 time(s) address= 0x8048dd6 function= new_table     line=  78 file= dictionary.c
+    Block #17: executed   26946 time(s) address= 0x8048de0 function= new_ele       line=  78 file= dictionary.c
+    Block #18: executed       0 time(s) address= 0x8048e1f function= new_ele       line=  85 file= dictionary.c
+    Block #19: executed   26946 time(s) address= 0x8048e42 function= new_ele       line=  88 file= dictionary.c
+    Block #20: executed       0 time(s) address= 0x8048e5c function= h_mod         line=  91 file= dictionary.c
+    Block #21: executed       0 time(s) address= 0x8048e97 function= h_mod         line= 103 file= dictionary.c
+    Block #22: executed       0 time(s) address= 0x8048ea3 function= h_mod         line= 104 file= dictionary.c
+    Block #23: executed       0 time(s) address= 0x8048ebc function= h_mod         line= 105 file= dictionary.c
+    Block #24: executed       0 time(s) address= 0x8048ecc function= h_add         line= 106 file= dictionary.c
+    Block #25: executed       0 time(s) address= 0x8048f06 function= h_add         line= 114 file= dictionary.c
+    Block #26: executed       0 time(s) address= 0x8048f0e function= h_add         line= 114 file= dictionary.c
+    Block #27: executed       0 time(s) address= 0x8048f1c function= h_add         line= 115 file= dictionary.c
+    Block #28: executed  946596 time(s) address= 0x8048f30 function= h_xor         line= 116 file= dictionary.c
+    Block #29: executed 3989613 time(s) address= 0x8048f70 function= h_xor         line= 124 file= dictionary.c
+    Block #30: executed 4936209 time(s) address= 0x8048f80 function= h_xor         line= 124 file= dictionary.c
+    Block #31: executed  946596 time(s) address= 0x8048f8e function= h_xor         line= 125 file= dictionary.c
+    Block #32: executed   26946 time(s) address= 0x8048fa0 function= save_string   line= 126 file= dictionary.c
+    Block #33: executed       0 time(s) address= 0x8048fed function= save_string   line= 136 file= dictionary.c
+    Block #34: executed   26946 time(s) address= 0x8049010 function= save_string   line= 139 file= dictionary.c
+    Block #35: executed 1177777 time(s) address= 0x804902c function= find_ele_rec  line= 141 file= dictionary.c
+    Block #36: executed   26946 time(s) address= 0x8049064 function= find_ele_rec  line= 148 file= dictionary.c
+    Block #37: executed 1150831 time(s) address= 0x8049084 function= find_ele_rec  line= 151 file= dictionary.c
+    Block #38: executed  919650 time(s) address= 0x804909d function= find_ele_rec  line= 152 file= dictionary.c
+    Block #39: executed   29800 time(s) address= 0x80490b6 function= find_ele_rec  line= 154 file= dictionary.c
+    Block #40: executed  231181 time(s) address= 0x80490d0 function= find_ele_rec  line= 159 file= dictionary.c
+    Block #41: executed 1150831 time(s) address= 0x80490e6 function= find_ele_rec  line= 160 file= dictionary.c
+    Block #42: executed 1177777 time(s) address= 0x80490ee function= find_ele_rec  line= 160 file= dictionary.c
+    Block #43: executed       0 time(s) address= 0x8049100 function= find_ele_iter line= 161 file= dictionary.c
+    Block #44: executed       0 time(s) address= 0x8049138 function= find_ele_iter line= 168 file= dictionary.c
+    Block #45: executed       0 time(s) address= 0x8049154 function= find_ele_iter line= 170 file= dictionary.c
+    Block #46: executed       0 time(s) address= 0x804916d function= find_ele_iter line= 172 file= dictionary.c
+    Block #47: executed       0 time(s) address= 0x804917e function= find_ele_iter line= 175 file= dictionary.c
+    Block #48: executed       0 time(s) address= 0x8049188 function= find_ele_iter line= 167 file= dictionary.c
+    Block #49: executed       0 time(s) address= 0x8049195 function= find_ele_iter line= 178 file= dictionary.c
+    Block #50: executed       0 time(s) address= 0x80491bb function= find_ele_iter line= 181 file= dictionary.c
+    Block #51: executed  305487 time(s) address= 0x80491cc function= compare_ele   line= 182 file= dictionary.c
+    Block #52: executed       1 time(s) address= 0x8049210 function= sort_words    line= 195 file= dictionary.c
+    Block #53: executed   10007 time(s) address= 0x8049265 function= sort_words    line= 207 file= dictionary.c
+    Block #54: executed   26946 time(s) address= 0x8049280 function= sort_words    line= 208 file= dictionary.c
+    Block #55: executed   26946 time(s) address= 0x804928c function= sort_words    line= 209 file= dictionary.c
+    Block #56: executed       0 time(s) address= 0x80492a0 function= sort_words    line= 211 file= dictionary.c
+    Block #57: executed       0 time(s) address= 0x80492af function= sort_words    line= 211 file= dictionary.c
+    Block #58: executed       0 time(s) address= 0x80492c0 function= sort_words    line= 212 file= dictionary.c
+    Block #59: executed       0 time(s) address= 0x80492d2 function= sort_words    line= 211 file= dictionary.c
+    Block #60: executed       0 time(s) address= 0x80492dc function= sort_words    line= 211 file= dictionary.c
+    Block #61: executed       0 time(s) address= 0x80492ea function= sort_words    line= 213 file= dictionary.c
+    Block #62: executed   26946 time(s) address= 0x80492f3 function= sort_words    line= 207 file= dictionary.c
+    Block #63: executed   10007 time(s) address= 0x8049306 function= sort_words    line= 206 file= dictionary.c
+    Block #64: executed       1 time(s) address= 0x804931b function= sort_words    line= 217 file= dictionary.c
+    Block #65: executed       1 time(s) address= 0x8049327 function= sort_words    line= 218 file= dictionary.c
+    Block #66: executed       1 time(s) address= 0x804933e function= sort_words    line= 220 file= dictionary.c
+    Block #67: executed   26945 time(s) address= 0x8049352 function= sort_words    line= 222 file= dictionary.c
+    Block #68: executed       1 time(s) address= 0x8049367 function= sort_words    line= 223 file= dictionary.c
+    Block #69: executed  946596 time(s) address= 0x8049390 function= insert_string line= 226 file= dictionary.c
+    Block #70: executed       1 time(s) address= 0x8049400 function= init_token    line= 237 file= dictionary.c
+    Block #71: executed  946597 time(s) address= 0x8049444 function= get_token     line= 247 file= dictionary.c
+    Block #72: executed  172949 time(s) address= 0x8049472 function= get_token     line= 262 file= dictionary.c
+    Block #73: executed       1 time(s) address= 0x8049497 function= get_token     line= 263 file= dictionary.c
+    Block #74: executed  172948 time(s) address= 0x80494a1 function= get_token     line= 265 file= dictionary.c
+    Block #75: executed  994450 time(s) address= 0x80494cb function= get_token     line= 257 file= dictionary.c
+    Block #76: executed  994449 time(s) address= 0x80494da function= get_token     line= 258 file= dictionary.c
+    Block #77: executed  946596 time(s) address= 0x80494fb function= get_token     line= 269 file= dictionary.c
+    Block #78: executed  946597 time(s) address= 0x8049507 function= get_token     line= 270 file= dictionary.c
+    Block #79: executed       1 time(s) address= 0x8049514 function= word_freq     line= 271 file= dictionary.c
+    Block #80: executed  946596 time(s) address= 0x8049566 function= word_freq     line= 287 file= dictionary.c
+    Block #81: executed  946597 time(s) address= 0x804957e function= word_freq     line= 288 file= dictionary.c
+    Block #82: executed       1 time(s) address= 0x804958d function= word_freq     line= 289 file= dictionary.c
+    Block #83: executed       1 time(s) address= 0x8049597 function= word_freq     line= 290 file= dictionary.c
+    Block #84: executed       1 time(s) address= 0x80495b2 function= word_freq     line= 291 file= dictionary.c
+    Block #85: executed      10 time(s) address= 0x80495c0 function= word_freq     line= 292 file= dictionary.c
+    Block #86: executed      10 time(s) address= 0x80495e4 function= word_freq     line= 294 file= dictionary.c
+    Block #87: executed       1 time(s) address= 0x80495ef function= word_freq     line= 296 file= dictionary.c
+    Block #88: executed       1 time(s) address= 0x8049624 function= main          line= 298 file= dictionary.c
+    Block #89: executed       0 time(s) address= 0x8049789 function= main          line= 323 file= dictionary.c
+    Block #90: executed       1 time(s) address= 0x80497b0 function= main          line= 326 file= dictionary.c
+    Block #91: executed       0 time(s) address= 0x80497be function= main          line= 327 file= dictionary.c
+    Block #92: executed       1 time(s) address= 0x80497e2 function= main          line= 330 file= dictionary.c
+    Block #93: executed       0 time(s) address= 0x80497f0 function= main          line= 331 file= dictionary.c
+    Block #94: executed       1 time(s) address= 0x8049814 function= main          line= 334 file= dictionary.c
+    Block #95: executed       1 time(s) address= 0x8049821 function= main          line= 335 file= dictionary.c
+    Block #96: executed       0 time(s) address= 0x804983e function= main          line= 337 file= dictionary.c
+    Block #97: executed       1 time(s) address= 0x8049865 function= main          line= 341 file= dictionary.c
+
+
+

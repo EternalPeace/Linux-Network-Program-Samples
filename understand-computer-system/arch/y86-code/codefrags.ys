@@ -1,0 +1,13 @@
+    irmovl $9,  %edx
+    irmovl $21, %ebx
+    subl %edx, %ebx	   # subtract
+    irmovl $128,%esp	   # Practice Prob. SLASHrefLBRACKprob:arch:traceirmovlRBRACK
+    rmmovl %esp, 100(%ebx) # store
+    pushl %edx             # push
+    popl  %eax             # Practice Prob. SLASHrefLBRACKprob:arch:tracepoplRBRACK
+    je done                # Not taken
+    call proc              # Practice Prob. SLASHrefLBRACKprob:arch:tracecallRBRACK
+done:
+    halt
+proc:
+    ret			   # Return

@@ -1,0 +1,4 @@
+	irmovl $0xabcd, %edx
+	rrmovl %esp, %ebx
+	mrmovl -12(%ebp), %ecx
+	rmmovl %esi, 0x41c(%esp)

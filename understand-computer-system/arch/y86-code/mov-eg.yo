@@ -1,0 +1,4 @@
+  0x000: 3082cdab0000 | 	irmovl $0xabcd, %edx
+  0x006: 2043         | 	rrmovl %esp, %ebx
+  0x008: 5015f4ffffff | 	mrmovl -12(%ebp), %ecx
+  0x00e: 40641c040000 | 	rmmovl %esi, 0x41c(%esp)

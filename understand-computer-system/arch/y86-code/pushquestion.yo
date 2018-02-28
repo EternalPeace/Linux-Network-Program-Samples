@@ -1,0 +1,5 @@
+                      | 	# Assembly Code to test semantics of pushl
+  0x000: 308400010000 | 	irmovl 0x100, %esp
+  0x006: a048         | 	pushl %esp  # Ambiguous
+  0x008: b008         | 	popl  %eax
+  0x00a: 10           | 	halt

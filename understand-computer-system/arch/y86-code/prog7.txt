@@ -1,0 +1,10 @@
+  0x000:    irmovl Stack,%esp  # Intialize stack pointer
+  0x006:    call proc          # Procedure call
+  0x00b:    irmovl $10,%edx    # Return point
+  0x011:    halt
+  0x020: .pos 0x20
+  0x020: proc:  
+  0x020:    ret		      # proc:
+  0x021:    rrmovl %edx,%ebx  	# Not executed
+  0x030: .pos 0x30
+  0x030: Stack:                # Stack: Stack pointer

@@ -1,0 +1,115 @@
+	/* $begin combine3prod-s 146 */	
+	# combine3: type=INT, OPER = *
+	# dest in %edi, data in %ecx, i in %edx, length in %esi
+.L18:				      # \textbf{loop:}
+	movl (%edi),%eax		# Read *dest
+	imull (%ecx,%edx,4),%eax	# Multiply by data[i]
+	movl %eax,(%edi)		# Write *dest
+	incl %edx			# i++
+	cmpl %esi,%edx			# Compare i:length
+	jl .L18				# If <, goto \textbf{loop}
+	/* $end combine3prod-s 146 */
+
+
+
+	/* $begin combine4prod-s 193 */	
+	# combine4: type=INT, OPER = *
+	# data in %eax, x in %ecx, i in %edx, length in %esi
+.L24:				      # \textbf{loop:}
+	imull (%eax,%edx,4),%ecx	# Multiply x by data[i]
+	incl %edx			# i++
+	cmpl %esi,%edx			# Compare i:length	
+	jl .L24				# If <, goto \textbf{loop}
+	/* $end combine4prod-s 193 */	
+.L22:
+	movl %ecx,(%edi)
+	leal -24(%ebp),%esp
+	popl %ebx
+	popl %esi
+	popl %edi
+	movl %ebp,%esp
+	popl %ebp
+	ret
+.Lfe4:
+
+unroll8x8_combine:
+	pushl %ebp
+	movl %esp,%ebp
+	subl $28,%esp
+	pushl %edi
+	pushl %esi
+	pushl %ebx
+	movl 8(%ebp),%ebx
+	addl $-12,%esp
+	pushl %ebx
+	call vec_length
+	movl %eax,%esi
+	addl $-12,%esp
+	pushl %ebx
+	call get_vec_start
+	leal -28(%eax,%esi,4),%ecx
+	movl $1,%edx
+	movl $1,%ebx
+	movl $1,%esi
+	movl %esi,-20(%ebp)
+	movl %esi,-4(%ebp)
+	movl %esi,-8(%ebp)
+	movl %esi,-12(%ebp)
+	movl %esi,-16(%ebp)
+	cmpl %ecx,%eax
+	jae .L122
+	.p2align 4,,7
+.L123:
+	movl -20(%ebp),%edi
+	imull (%eax),%edx
+	imull 4(%eax),%ebx
+	imull 8(%eax),%esi
+	imull 12(%eax),%edi
+	movl %edi,-20(%ebp)
+	movl -4(%ebp),%edi
+	imull 16(%eax),%edi
+	movl %edi,-4(%ebp)
+	movl -8(%ebp),%edi
+	imull 20(%eax),%edi
+	movl %edi,-8(%ebp)
+
+	/* $begin spilling-s 1852 */
+	# type=INT, OPER = '*'
+	# x6 in -12(%ebp), data+i in %eax
+	movl -12(%ebp),%edi	# Get x6 from stack
+	imull 24(%eax),%edi	# Multiply by data[i+6]
+	movl %edi,-12(%ebp)	# Put x6 back
+	/* $end spilling-s 1852 */
+	movl -16(%ebp),%edi
+	imull 28(%eax),%edi
+	movl %edi,-16(%ebp)
+	addl $32,%eax
+	cmpl %ecx,%eax
+	jb .L123
+.L122:
+	addl $28,%ecx
+	cmpl %ecx,%eax
+	jae .L126
+	.p2align 4,,7
+.L127:
+	imull (%eax),%edx
+	addl $4,%eax
+	cmpl %ecx,%eax
+	jb .L127
+.L126:
+	movl 12(%ebp),%eax
+	imull %ebx,%edx
+	imull %esi,%edx
+	imull -20(%ebp),%edx
+	imull -4(%ebp),%edx
+	imull -8(%ebp),%edx
+	imull -12(%ebp),%edx
+	imull -16(%ebp),%edx
+	movl %edx,(%eax)
+	leal -40(%ebp),%esp
+	popl %ebx
+	popl %esi
+	popl %edi
+	movl %ebp,%esp
+	popl %ebp
+	ret

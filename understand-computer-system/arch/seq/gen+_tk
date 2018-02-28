@@ -1,0 +1,5 @@
+#!/usr/local/bin/perl
+$pwd = `pwd`;
+chomp($pwd);
+print "#!$pwd/seq+_wish -f\n";
+print "source $pwd/seq+_tk.tcl\n";

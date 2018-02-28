@@ -1,0 +1,13 @@
+  0x000: 308209000000 |     irmovl $9,  %edx
+  0x006: 308315000000 |     irmovl $21, %ebx
+  0x00c: 6123         |     subl %edx, %ebx	   # subtract
+  0x00e: 308480000000 |     irmovl $128,%esp	   # Practice Prob. SLASHrefLBRACKprob:arch:traceirmovlRBRACK
+  0x014: 404364000000 |     rmmovl %esp, 100(%ebx) # store
+  0x01a: a028         |     pushl %edx             # push
+  0x01c: b008         |     popl  %eax             # Practice Prob. SLASHrefLBRACKprob:arch:tracepoplRBRACK
+  0x01e: 7328000000   |     je done                # Not taken
+  0x023: 8029000000   |     call proc              # Practice Prob. SLASHrefLBRACKprob:arch:tracecallRBRACK
+  0x028:              | done:
+  0x028: 10           |     halt
+  0x029:              | proc:
+  0x029: 90           |     ret			   # Return

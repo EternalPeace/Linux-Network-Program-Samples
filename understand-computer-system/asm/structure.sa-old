@@ -1,0 +1,30 @@
+copy:
+	pushl %ebp
+	movl %esp,%ebp
+	movl 8(%ebp),%edx
+	movl %ebp,%esp
+
+	/* $begin structcopy-s 13 */
+	movl (%edx),%eax		# Get r->i
+	movl %eax,4(%edx)		# Store in r->j
+	/* $end structcopy-s 13 */
+
+	popl %ebp
+	ret
+
+
+link_p:
+	pushl %ebp
+	movl %esp,%ebp
+	movl 8(%ebp),%edx
+	movl %ebp,%esp
+
+	/* $begin structlink-s 87 */
+	movl 4(%edx),%eax		# Get r->j
+	addl (%edx),%eax		# Add r->i
+	leal 8(%edx,%eax,4),%eax	# Compute &r->[r->i + r->j]	
+	movl %eax,20(%edx)		# Store in r->p
+	/* $end structlink-s 87 */
+
+	popl %ebp
+	ret

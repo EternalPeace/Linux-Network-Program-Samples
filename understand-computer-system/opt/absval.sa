@@ -1,0 +1,13 @@
+	/* $begin absval-s 8 */
+absval:
+	pushl %ebp
+	movl %esp,%ebp
+	movl 8(%ebp),%eax # Get val
+	testl %eax,%eax	  # Test it
+	jge .L3		  # If >0, goto\textbf{end}
+	negl %eax	  # Else, negate it
+.L3:			  # \textbf{end:}
+	movl %ebp,%esp		
+	popl %ebp
+	ret
+	/* $end absval-s 8 */

@@ -1,0 +1,50 @@
+inner4:
+	pushl %ebp
+	movl %esp,%ebp
+	subl $12,%esp
+	pushl %edi
+	pushl %esi
+	pushl %ebx
+	movl 8(%ebp),%ebx
+	addl $-12,%esp
+	pushl %ebx
+	call vec_length
+	movl %eax,%edi
+	addl $-12,%esp
+	pushl %ebx
+	call get_vec_start
+	movl %eax,%esi
+	movl 12(%ebp),%eax
+	addl $32,%esp
+	addl $-12,%esp
+	pushl %eax
+	call get_vec_start
+	movl %eax,%ebx
+	xorl %ecx,%ecx
+	xorl %edx,%edx
+	cmpl %edi,%ecx
+	jge .L22
+	.p2align 4,,7
+	/* $begin inner4-s 218 */
+	# udata in %esi, vdata in %ebx, i in %edx, sum in %ecx, length in %edi
+.L24:				      # \textbf{loop:}
+	movl (%esi,%edx,4),%eax		# Get udata[i]	
+	imull (%ebx,%edx,4),%eax	# Multiply by vdata[i]
+	addl %eax,%ecx			# Add to sum
+	incl %edx			# i++
+	cmpl %edi,%edx			# Compare i:length
+	jl .L24				# If <, goto \textbf{loop}
+	/* $end inner4-s 218 */
+.L22:
+	movl 16(%ebp),%eax
+	movl %ecx,(%eax)
+	leal -24(%ebp),%esp
+	popl %ebx
+	popl %esi
+	popl %edi
+	movl %ebp,%esp
+	popl %ebp
+	ret
+
+
+

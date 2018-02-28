@@ -1,0 +1,32 @@
+This directory contains the code to construct simulators for PIPE and
+the variants of it described in the homework exercises.
+
+Two forms of the simulator can be constructed:
+	pipe_tk: Uses a graphic user interface.  Nice for visualizing
+		and debugging.  Requires installation of Tcl/Tk.
+	pipe_tty: Prints all information about its runtime behavior
+		on the terminal.  Hard to understand what's going on,
+		but useful for automated testing, and doesn't require
+		any special installation features.
+
+For each simulator, different "versions" can be constructed to use
+	different HCL files when working on the different homework problems
+
+	VERSION		HCL File	Description
+	std		pipe-std.hcl	Standard simulator (default)
+	broken		pipe-broken.hcl Does not handle any hazards
+	full		pipe-full.hcl	For adding iaddl and leave
+	nobypass	pipe-nobypass.hcl	For implementing PIPE-
+	lf		pipe-lf.hcl	For implementing load forwarding
+	nt		pipe-nt.hcl	For implementing NT branch prediction
+	btfnt		pipe-btfnt.hcl	For implementing BTFNT branch pred.
+	1w		pipe-1w.hcl	For implementing single write port
+
+Simulators can be constructed using make.  Just say:
+
+	make pipe_tty VERSION=xxx
+		or
+	make pipe_tk VERSION=xxx
+
+Where "xxx" is one of the versions listed above.
+

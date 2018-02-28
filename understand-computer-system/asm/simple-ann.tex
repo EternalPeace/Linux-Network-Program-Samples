@@ -1,0 +1,13 @@
+\begin{alltt}
+simple:{\em\scriptsize }
+  pushl %ebp      {\em\scriptsize  Save frame pointer}
+  movl %esp,%ebp  {\em\scriptsize  Create new frame pointer}
+  movl 8(%ebp),%eax {\em\scriptsize  Get {\tt xp}}
+  movl (%eax),%edx  {\em\scriptsize  Retrieve {\tt *xp}}
+  addl 12(%ebp),%edx {\em\scriptsize  Add {\tt y} to get {\tt t}}
+  movl %edx,(%eax) {\em\scriptsize  Store {\tt t} at {\tt *xp}}
+  movl %edx,%eax {\em\scriptsize  Set {\tt t} as return value}
+  movl %ebp,%esp {\em\scriptsize  Reset stack pointer}
+  popl %ebp {\em\scriptsize  Reset frame pointer}
+  ret {\em\scriptsize  Return}
+\end{alltt}

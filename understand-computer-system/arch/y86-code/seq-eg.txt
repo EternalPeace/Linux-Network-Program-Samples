@@ -1,0 +1,6 @@
+  0x000:   irmovl $0x100,%ebx  # %ebx <-- 0x100
+  0x006:   irmovl $0x200,%edx  # %edx <-- 0x200
+  0x00c:   addl %edx,%ebx      # %ebx <-- 0x300 CC <-- 000
+  0x00e:   je dest             # Not taken
+  0x013:   rmmovl %ebx,0(%edx) # M[0x200] <-- 0x300
+  0x019: dest: halt

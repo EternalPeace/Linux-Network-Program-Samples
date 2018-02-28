@@ -1,0 +1,5 @@
+  0x000:   irmovl $10,%edx
+  0x006:   irmovl  $3,%eax
+  0x00c:   nop
+  0x00d:   addl %edx,%eax
+  0x00f:   halt

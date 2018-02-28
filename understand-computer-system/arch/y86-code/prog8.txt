@@ -1,0 +1,8 @@
+  0x000:    xorl %eax,%eax 
+  0x002:    jne  target        # Not taken
+  0x007:    irmovl $1, %eax    # Fall through
+  0x00d:    halt
+  0x00e: target:
+  0x00e:    irmovl $2, %edx    # Target
+  0x014:    irmovl $3, %ebx    # Target+1
+  0x01a:    halt

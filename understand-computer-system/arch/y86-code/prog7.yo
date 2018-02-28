@@ -1,0 +1,14 @@
+                      | # Demonstration of return
+                      | # /* $begin prog7-ys */
+                      | # prog7
+  0x000: 308430000000 |    irmovl Stack,%esp  # Intialize stack pointer
+  0x006: 8020000000   |    call proc          # Procedure call
+  0x00b: 30820a000000 |    irmovl $10,%edx    # Return point
+  0x011: 10           |    halt
+  0x020:              | .pos 0x20
+  0x020:              | proc:  
+  0x020: 90           |    ret		      # proc:
+  0x021: 2023         |    rrmovl %edx,%ebx  	# Not executed
+  0x030:              | .pos 0x30
+  0x030:              | Stack:                # Stack: Stack pointer
+                      | # /* $end prog7-ys */

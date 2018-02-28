@@ -1,0 +1,14 @@
+                      | # Example instructions for encoding
+                      | 
+                      | #/* $begin y86-encode-ys */
+                      | #/* $begin y86-encode-yo */
+  0x100:              | .pos 0x100  # Start generating code at address 0x100
+  0x100: 30830f000000 |     irmovl $15,%ebx
+  0x106: 2031         |     rrmovl %ebx,%ecx
+  0x108:              | loop:
+  0x108: 4013fdffffff |     rmmovl %ecx,-3(%ebx)
+  0x10e: 6031         |     addl   %ebx,%ecx
+  0x110: 7008010000   |     jmp loop
+                      | #/* $end y86-encode-yo */
+                      | #/* $end y86-encode-ys */
+                      | 

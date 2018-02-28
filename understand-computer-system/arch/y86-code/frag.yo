@@ -1,0 +1,56 @@
+                      | # /* $begin data-dep-ys */
+  0x000: 308032000000 |     irmovl $50,%eax
+  0x006: 6003         |     addl %eax,%ebx
+  0x008: 502364000000 |     mrmovl 100(%ebx),%edx
+                      | # /* $end data-dep-ys */
+                      | 
+                      | # /* $begin control-dep-ys */
+  0x00e:              | loop:
+  0x00e: 6123         |     subl %edx,%ebx
+  0x010: 7420000000   |     jne targ
+  0x015: 30820a000000 |     irmovl $10,%edx
+  0x01b: 700e000000   |     jmp loop
+  0x020:              | targ:
+  0x020: 10           |     halt
+                      | # /* $end control-dep-ys */
+                      | 
+                      | # /* $begin pipe-popl-ys */
+  0x021: 308205000000 |     irmovl $5, %edx
+  0x027: 308400010000 |     irmovl $0x100,%esp
+  0x02d: 402400000000 |     rmmovl %edx,0(%esp)
+  0x033: b048         |     popl %esp
+  0x035: 2040         |     rrmovl %esp,%eax
+                      | # /* $end pipe-popl-ys */
+                      | 
+                      | # /* $begin pipe-popl2-ys */
+  0x037: 308205000000 |     irmovl $5, %edx
+  0x03d: 308400010000 |     irmovl $0x100,%esp
+  0x043: 402400000000 |     rmmovl %edx,0(%esp)
+  0x049: b048         |     popl %esp
+  0x04b: 00           |     nop
+  0x04c: 00           |     nop
+  0x04d: 2040         |     rrmovl %esp,%eax
+                      | # /* $end pipe-popl2-ys */
+                      | 
+                      | 
+                      | # /* $begin load-store-ys */
+  0x04f: 502100000000 |     mrmovl 0(%ecx),%edx   # Load  1
+  0x055: a028         |     pushl  %edx           # Store 1
+  0x057: 00           |     nop
+  0x058: b028         |     popl %edx             # Load  2
+  0x05a: 400200000000 |     rmmovl %eax,0(%edx)   # Store 2
+                      | # /* $end load-store-ys */
+                      | 
+                      | # /* $begin addr-exception-ys */
+  0x060: 308400000000 |     irmovl $0,%esp        # Set stack pointer to 0
+  0x066: a008         |     pushl %eax            # Attempts to write to 0xfffffffc
+  0x068: 6010         |     addl  %ecx,%eax       # Sets condition codes
+                      | # /* $end addr-exception-ys */
+                      | 
+                      | # /* $begin basic-ys */
+  0x06a: 308001000000 |   irmovl  $1,%eax  # I1
+  0x070: 308102000000 |   irmovl  $2,%ecx  # I2
+  0x076: 308203000000 |   irmovl  $3,%edx  # I3
+  0x07c: 308304000000 |   irmovl  $4,%ebx  # I4
+  0x082: 10           |   halt             # I5
+                      | # /* $end basic-ys */

@@ -1,0 +1,52 @@
+# Example instructions for decoding
+
+.pos 0x100  # Start generating code at address 0x100
+#/* $begin y86-decode1-ys */
+#/* $begin y86-decode1-yo */
+    irmovl $-4,%ebx
+    rmmovl %esi,0x800(%ebx)
+    halt
+#/* $end y86-decode1-yo */
+#/* $end y86-decode1-ys */
+
+.pos 0x200  # Start generating code at address 0x200
+#/* $begin y86-decode2-ys */
+#/* $begin y86-decode2-yo */
+    pushl %esi
+    call proc
+    halt
+proc:
+    irmovl $10,%ebx
+    ret
+#/* $end y86-decode2-yo */
+#/* $end y86-decode2-ys */
+
+.pos 0x300  # Start generating code at address 0x300
+#/* $begin y86-decode3-ys */
+#/* $begin y86-decode3-yo */
+    mrmovl 7(%esp),%ebp
+    nop
+.byte 0xf0  # invalid instruction code
+    popl %ecx
+#/* $end y86-decode3-yo */
+#/* $end y86-decode3-ys */
+
+.pos 0x400  # Start generating code at address 0x400
+#/* $begin y86-decode4-ys */
+#/* $begin y86-decode4-yo */
+loop:
+    subl %ecx, %ebx
+    je loop
+    halt  
+#/* $end y86-decode4-yo */
+#/* $end y86-decode4-ys */
+
+.pos 0x500  # Start generating code at address 0x500
+#/* $begin y86-decode5-ys */
+#/* $begin y86-decode5-yo */
+    xorl %esi,%edx
+    .byte 0xa0  # pushl instruction code
+    .byte 0x80  # Invalid register specifier byte
+#/* $end y86-decode5-yo */
+#/* $end y86-decode5-ys */
+

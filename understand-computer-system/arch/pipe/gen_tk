@@ -1,0 +1,5 @@
+#!/usr/local/bin/perl
+$pwd = `pwd`;
+chomp($pwd);
+print "#!$pwd/pipe_wish -f\n";
+print "source $pwd/pipe_tk.tcl\n";

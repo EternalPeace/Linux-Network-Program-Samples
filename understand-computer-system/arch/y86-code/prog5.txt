@@ -1,0 +1,7 @@
+  0x000:   irmovl $128,%edx
+  0x006:   irmovl  $3,%ecx
+  0x00c:   rmmovl %ecx, 0(%edx)
+  0x012:   irmovl  $10,%ebx
+  0x018:   mrmovl 0(%edx), %eax  # Load %eax
+  0x01e:   addl %ebx,%eax        # Use %eax
+  0x020:   halt
